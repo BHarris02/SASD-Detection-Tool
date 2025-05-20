@@ -3,3 +3,7 @@ __pycache__
 .vscode
 .venv
 .coverage
+
+node_modules
+react-frontend
+/build
