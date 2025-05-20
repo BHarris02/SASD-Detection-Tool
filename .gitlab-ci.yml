@@ -1,0 +1,14 @@
+stages:
+  - test
+
+backend_tests:
+  stage: test
+  image: python:3.10
+  before_script:
+    - cd backend
+    - pip install -r requirements.txt
+    - export FLASK_APP=main.py
+    - flask run --host=0.0.0.0 &      
+    - sleep 3                         
+  script:
+    - python -m unittest discover
