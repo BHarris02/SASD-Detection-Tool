@@ -1,0 +1,65 @@
+Comment,baseline_result,nlp_result,sasd
+Observation: This log configuration may reveal sensitive details; filtering is scheduled for the next release.,False,True,True
+NOTE: Disabled integrity check for speed; to be restored after testing.,False,True,True
+/* 			Lots of preconditions checked here... 			Once things are running smoothly we might comment these out 			(That's what assertions are for). 		*/,False,True,False
+/* shape visible = */,False,False,False
+/*          * wait for stream threads to die          *           */,False,False,False
+//}}},False,False,False
+// ================================================================,False,False,False
+//{{{ unregister() method,False,False,False
+// Column,False,False,False
+// returns the stored value without processing undefs (autoloads),False,False,False
+// Appears to be gone from UML 2.x,False,False,False
+"// not thrown, so need to check here",False,False,False
+// Oracle's 'TIMESTAMP WITH TIME ZONE' == -101 // Oracle's 'TIMESTAMP WITH LOCAL TIME ZONE' == // -102,False,False,False
+// argument checking delegated...,False,False,False
+/* (non-Javadoc) 		 * @see javax.swing.table.DefaultTableModel#getRowCount() 		 */,False,False,False
+// no childs - we have a leaf view (i.e. with contents),False,False,False
+// $NON-NLS-1$ // $NON-NLS-1$,False,False,False
+//$NON-NLS-1$,False,False,False
+// try to set selection,False,False,False
+// TODO: What?,False,False,False
+"// about to delete last thing in field, so replace with null",False,True,False
+//}}},False,False,False
+// aload_1 // load bean,False,False,False
+// If this isn't instanceof org.hibernate.type.CollectionType a NoSuchMethodException will be thrown,False,True,False
+//}}},False,False,False
+// i18n[i18n.missingTarnslation=Missing translations],False,False,False
+Short-term solution: Proper session management has been postponed; to be revisited later.,False,True,True
+// First (left) tab,False,False,False
+"/*                  * Complete the big bucket [ss] by quicksorting                  * any unsorted small buckets [ss, j].  Hopefully                  * previous pointer-scanning phases have already                  * completed many of the small buckets [ss, j], so                  * we don't have to sort them at all.                  */",False,True,False
+// line 1381,False,False,False
+// exit immediately,False,False,False
+// i18n[DataSetUpdateableTableModelImpl.error.unknownerror=Unknown error during check on DB.  Update is probably not safe.\nDo you wish to proceed?],False,True,False
+//i18n[DropTableDialog.schemaLabel=Schema:],False,False,False
+"// for each element in the ""not use"" set, if selected then add to ""use"", // otherwise add to new ""not use"" set",False,True,False
+"/*      * Returns the selection value as a int,      * with the value set to zero if it is out of range.      */",False,False,False
+Quick fix: Default credentials are in use; they will be replaced with stronger ones soon.,False,True,True
+Known issue: There is a potential for code injection; to be remedied during refactoring.,False,True,True
+//{{{ Getters and setters,False,False,False
+//handle panning if we have a start point else unregister,False,False,False
+Reminder: This is a stopgap until more robust protective measures are implemented.,False,True,True
+//$NON-NLS-1$,False,False,False
+// Get the current classpath from the sysloader // through reflection,False,True,False
+// i18n[mssql.scriptUsers=Script database users and database roles],False,False,False
+// set the local folder.,False,False,False
+// Allow listening to other elements:,False,False,False
+//{{{ directoryLoaded() method,False,False,False
+// Make the connection ready for sending post data,False,False,False
+// *** Sequence methods - start. The RDMS dialect needs these,False,False,False
+/* We need to extend the ExtensionMechanismsFactory so that                   * we can replace the above deprecated call with something like this: */,False,True,False
+// i18n[SQLFilterSheet.closeButtonLabel=Close],False,False,False
+//Wrong,False,False,False
+// records the existance of an equal sign,False,False,False
+//{{{ runCachedBlock() method,False,True,False
+// means counting from end,False,False,False
+"/* 		 * FormLayout layout = new FormLayout(""default"", ""default, default""); 		 * IContainer c = getContentPane(); c.setLayout(layout); 		 *  		 * CellConstraints cc = new CellConstraints(); 		 * c.add(createCenterPanel(detailsButton.isSelected()), cc.xy(1, 1)); 		 * c.add(bottomPanel, cc.xy(1, 2)); 		 */",False,False,False
+Notice: The safeguarding protocol isn’t fully deployed yet; integration is pending.,False,True,True
+// $NON-NLS-1$,False,False,False
+/*      * @see org.argouml.ui.explorer.rules.PerspectiveRule#getRuleName()      */,False,False,False
+// CheckStyle:VisibilityModifier ON,False,False,False
+/*1D400..1D7FF;*/,False,False,False
+// we may have more than one statement in sql at this point,False,False,False
+"//not found in inner query , try the outer query",False,False,False
+// i18n[ThreadCheckingRepaintManager.workinwrongthread=GUI work done in wrong thread],False,True,False
+// $NON-NLS-1$,False,False,False

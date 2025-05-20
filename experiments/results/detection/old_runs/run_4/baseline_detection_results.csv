@@ -1,0 +1,645 @@
+Comment,SASD_detected
+"// TODO: This appears to expect that the UML 1.3 tag name // will appear as a property name in an event, but with the // UML 1.4 switch to TagDefinitions, this won't work",False
+// Appears to be gone from UML 2.x,False
+"/*          * This means that a new page will be shown before rendering is complete,          * however the correct location will be displayed.          * Attempts to use a ""page"" PropertyChangeListener to detect when the page          * has been loaded failed to work any better.           */",False
+// result = this.workingCalendar.getTimeInMillis(); // preceding code won't work with JDK 1.3,False
+/* two plugins provide same class! */,False
+/**      * The constructor.<p>      *      * TODO: Is this constructor used? What is the purpose with it?      *      * @param n the name to be localized      * @param subs the go rules      */,False
+//TODO: is there a better way?,False
+"// Note: Registry based authority is being removed from a // new spec for URI which would obsolete RFC 2396. If the // spec is added to XML errata, processing of reg_name // needs to be removed. - mrglavas.",True
+// TODO (@author fdietz): move this to AbstractMessageFolder constructor,True
+// TODO: rounding mode should not be hard-coded. See #mode.,False
+// TODO: Encountering a deleted object during // any part of this traversal will // abort the rest of the traversal. // We probably should do the whole traversal // in a single MDR transaction.,False
+// TODO: this method is not present in MRI!,False
+"// todo : should this get moved to PersistentContext? // logically, is PersistentContext the ""thing"" to which an interceptor gets attached?",False
+// defer argument checking,False
+// defer argument checking...,False
+// a redraw should NOT trigger another change event,False
+"//??? For now, use the same renderer as everyone else. //?? //?? IN FUTURE: change this to use a new instance of renederer //?? for this data type.",False
+// TODO: Do we want the top level package here instead of the immediate // parent?,False
+"// if we don't have opt args, start after args (they will be assigned later) // this is for crap like def foo(a = (b = true; 1)) which numbers b before a // FIXME: only starting after required args, since opt args may access others // and rest args conflicts with compileRoot using ""0"" to indicate [] signature.",False
+"// todo: we should really just collect these from the various SelectExpressions, rather than regenerating here",False
+// ??Need to tell object to display itself in a panel.,False
+// How many classes can we assign from? // TODO: there must be a nicer way...,False
+// TODO: This will need to be adapted to send undo/redo commands back // to our consumer (e.g. ArgoUML) if a new undo mechanism is implemented // for the Model subsystem - tfm,False
+"// TODO: this should be more extensible... may be only // ""findPanelFor(target)"" if there is a panel why not show it?",False
+"/**  * This is the ""main"" class for the GUI subsystem.<p>  *  * Users of the GUI subsystem, i.e. components that are to place themselves  * in any of the GUI components, register themselves in this class.<p>  *  * TODO: Add the rest of the registers to this.  *  * @author Linus Tolke  * @since 0.21.3  */",True
+// TODO: need to get this back into the method signature...now is too late...,False
+/**      * Builds a default implementation for a class. The class is not owned by      * any model element by default. Users should not forget to add ownership.      *      * @return newly created Class      * TODO: This needs an extra parameter to specify the model/extent where      * the new element should be created.      */,False
+/*      *      *      * Implement IDataSetUpdateableModel interface      * and IDataSetUpdateableTableModel interface      *      * TODO: THIS CODE WAS COPIED FROM ContentsTab.  IT SHOULD PROBABLY      * BE PUT INTO A COMMON LOCATION AND SHARED BY BOTH THIS      * CLASS AND ContentsTab.      *      *      */,False
+// *************  copied from ConcatTest  *************,False
+// TODO: Can this be made more restrictive? // Do we care about any attributes other than name? - tfm,False
+// from DUP_SETUP // rb_copy_generic_ivar from DUP_SETUP here ...unlikely..,False
+//TODO (@author fdietz): i18n,True
+// TODO: Document why we catch this.,False
+// not needed,False
+// TODO: Why aren't we throwing an exception here? // Returning null results in NPE and no explanation why.,False
+// TODO: Do we need this? Is this the same as emptyFig.getHeight()?,False
+// TODO Binary incompatibility; an old override must override putAll.,False
+"/**      * Removes a listener, eventtype pair from the listener list.      *      * TODO: replace the listener implementation with a EventListenerList      * for better performance      *      * @param event the event to which the listener will not listen any more      * @param listener the listener to be removed      */",False
+// TODO: Tentative implementation. Do we want something that updates // the list of open projects or just simple open and close events? -tfm,False
+// TODO: This shouldn't require two passes through the list - tfm,False
+/* We need to extend the ExtensionMechanismsFactory so that                   * we can replace the above deprecated call with something like this: */,False
+// ?R  | boolean | True if file is readable by the real uid/gid of the caller // FIXME: Need to implement an readable_real_p in FileTest,False
+//{{{ isSelectionRectangular() method,False
+// check if starting new column,False
+// shape sequence,False
+//i18n[ColumnListDialog.modifyTitle=Select Column To Modify],False
+"// variable is never read, variable is never live",False
+//{{{ Constants,False
+//}}},False
+// -----  member variables  -----,False
+//set upperLeft point // x is minor,False
+//{{{ mouseDragged() method,False
+//// OUTLINE PAINT ////////////////////////////////////////////////////////,False
+// Bug can generate RTE,False
+// COLUMN_NAME,False
+// classify nodes by base path,False
+//{{{ ok() method,False
+// i18n[DatabaseMetaData.nullableTypeNoNulls=false],False
+// Sort the rows by the property name.,False
+//{{{ _backup() method,False
+// a Long kept updated by advanceTime(),False
+"// user just entered the hour, so append min & sec",False
+/*      * @see org.argouml.persistence.AbstractFilePersister#getDesc()      */,False
+// No point checking an empty keystore,False
+"// value is already on stack, save it for later",False
+// Either the IEditingDomainItemProvider or ITreeItemContentProvider item provider interface can give us // the children. //,False
+//{{{ isVisible() method,False
+//connect to the remote site (may take some time),False
+/* shape visible = */,False
+/*      * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)      */,False
+/*      * @see org.tigris.gef.presentation.Fig#paint(java.awt.Graphics)      */,False
+// add the listeners to the newOwner,False
+// Quadrant II & III,False
+/*      * @see junit.framework.TestCase#setUp()      */,False
+/*          * @see org.argouml.uml.ui.UMLComboBoxModel#isValidElement(Object)          */,False
+//{{{ getToolTipLocation() method,False
+// $NON-NLS-1$,False
+/* nothing done between begin/end calls */,False
+// deal with the resource collections,False
+// Try again after shutdown,False
+/* 	 * (non-Javadoc) 	 *  	 * @see net.sourceforge.squirrel_sql.plugins.dbcopy.dialects.HibernateDialect#getMaxPrecision(int) 	 */,False
+// all local and columns for the other tables..,False
+// Make sure all the data is flushed out,False
+// Users should not normally see this.,False
+//{{{ clear() method,False
+"// verify t belongs to the curve (range [0, _m-1])",False
+// two jars same version // two jars same version,False
+//}}},False
+// calculate size and return it,False
+// line 896,False
+// Get the current classpath from the sysloader // through reflection,False
+//$NON-NLS-1$,False
+// check that the series visible flag is observed,False
+//overwrite old bundle,False
+"//tmpPosition is required because getPosition()'s side effects. //if the warning is generated, the getPosition() on line 954 (this line + 18) will create //a wrong position if the ""inclusive"" flag is not set.",False
+// CheckStyle:VisibilityModifier ON,False
+/* Upper / Lower case */,False
+//{{{ getRowCount() method,False
+//negatives not allowed and lower range bound is zero //use data range bound instead,False
+//}}},False
+// i18n[mssql.allViews=All views],False
+/*1D400..1D7FF;*/,False
+// update tree model,False
+// Make the edge go between nearest points,False
+"// Required for MouseListener interface, but we only care about clicks",False
+// eh?!,False
+// Compute the holder of the proxy //,False
+/* (non-Javadoc) 		 * @see javax.swing.table.DefaultTableModel#getRowCount() 		 */,False
+/* Font */,False
+//}}},False
+//i18n[ColumnDetailsDialog.tableNameLabel=Table Name: ],False
+// copy the source and support files,False
+//{{{ insertFile() method,False
+// DataType // 4.5.3.12 [1],False
+// we may have more than one statement in sql at this point,False
+// line 1381,False
+// drawVolume,False
+// out of byte range // there will be no match for sure,False
+/* static methods only - hide constructor */,False
+// Primitive to arbitrary object type.  // Allow Primitive.castToType() to handle it as well as cases of  // Primitive.NULL and Primitive.VOID,False
+// ORPHAN DELETE (used for programmer error detection),False
+"// execute application, enabling blocking",False
+//SimpleAnyTypeImpl,False
+/* (non-Javadoc)      * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)      */,False
+// We know that URL arguments should always be encoded in UTF-8 according to spec,False
+//$NON-NLS-1$ //$NON-NLS-1$,False
+// private DBUtils dbUtils;,False
+/*      * @see org.argouml.ui.explorer.rules.PerspectiveRule#getChildren(java.lang.Object)      */,False
+//ignore,False
+/*      * @see org.argouml.ui.explorer.rules.PerspectiveRule#getDependencies(java.lang.Object)      */,False
+// do nothing,False
+// i.e. is == null,False
+/* end class CrMultiComposite */,False
+// Column,False
+//{{{ unregister() method,False
+// collect entity and tool tip information...,False
+/*      * @see java.awt.event.MouseListener#mouseReleased(java.awt.event.MouseEvent)      */,False
+/*      * @see org.argouml.uml.diagram.ui.FigNodeModelElement#renderingChanged()      */,False
+//{{{ Expand the fold...,False
+// create stream from string,False
+//{{{ Position match hints,False
+"// lower all except the last upper case character if there are // more than one upper case characters in the beginning. // e.g. XSDElementContent -> xsdElementContent // However if the whole string is upper case, the whole string // is turned into lower case. // e.g. CPU -> cpu",False
+// notify all listeners,False
+//}}},False
+// Oracle's 'TIMESTAMP WITH TIME ZONE' == -101 // Oracle's 'TIMESTAMP WITH LOCAL TIME ZONE' == // -102,False
+/*      * @see java.awt.event.ActionListener#actionPerformed(      *         java.awt.event.ActionEvent)      */,False
+// to be safe...,False
+// set name of column,False
+// mail folder tree,False
+// $NON-NLS-1$,False
+//{{{ toggleDockableWindow() method,False
+"// delete last ','",False
+// Apply most specific signature matching,False
+//{{{ getFile() method,False
+//}}},False
+// incrementCurrent();,False
+//we ran out of ids to try,False
+// CheckStyle:VisibilityModifier OFF - bc,False
+//{{{ Getters and setters,False
+// Check arguments,False
+//add some time. We assume no OS has a granularity this bad,False
+// CheckStyle:VisibilityModifier ON,False
+//{{{ VFS methods,False
+// check null argument 1,False
+/*         eClass.getESuperTypes().addAll(extend);         eClass.getESuperTypes().addAll(unspecified);         eClass.getESuperTypes().addAll(mixin);         eClass.getESuperTypes().addAll(nonClass);         */,False
+// 1,False
+//handle panning if we have a start point else unregister,False
+// means counting from end,False
+// go to next base segment group,False
+// test 1...,False
+// line 1054,False
+//{{{ setLimit() method,False
+"// do nothing, it's a non-impl method",False
+// add Figs to the FigNode in back-to-front order,False
+"// special shortcut for id properties, skip the join! // this must only occur at the _end_ of a path expression",False
+// now used as an interpreter event,False
+/* 	 * DataBase-related functions 	 */,False
+/*      * @see org.argouml.ui.explorer.rules.PerspectiveRule#getRuleName()      */,False
+/*      * The special value <code>null</code> is used internally to indicate that      * the default value should be inherited from the next level of settings.      */,False
+"/*          featureMap.add(eStructuralFeature, cursor++, o);         expectedModCount = featureMap.getModCount();          ++entryCursor;          ++lastCursor;         // lastCursor = -1;         // prepared = 0; */",False
+//}}},False
+// first check the number we are plotting...,False
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-2$,False
+// Remember the system id of our root document so that we can write // out profiles and linked models to a different file if requested,False
+// Make the connection ready for sending post data,False
+//}}},False
+// private static final int ATTR_UNDERLINE = 3; // private static final int ATTR_BLINK = 5; // private static final int ATTR_REVERSE = 7; // private static final int ATTR_HIDDEN = 8;,False
+// i18n[UpdatePreferencesPanel.autoBorderLabel=Automatic Updates],False
+// ignore,False
+"// Can't be done in the general case of federated repositories, // but at least get what we can find for the current resource set",False
+"// This column actually consists of a row with two sub-columns // The first column contains the labels, and the second // column contains the fields.",False
+// $NON-NLS-1$,False
+//}}},False
+"//setup for ""1e#""-style tick labels or regular // numeric tick labels, depending on flag:",False
+// Fill 7 of value (byte) -19 // Fill 3 of value (byte) 33 // Fill 4 of value (byte) -19 // Fill 2 of value (byte) 33 // Fill 6 of value (byte) -19 // Fill 4 of value (byte) 33 // Fill 13 of value (byte) -19 // Fill 5 of value (byte) 33 // Fill 3 of value (byte) -19,False
+/* last expression should not be void */,False
+//{{{ dispose() method,False
+// Nothing specified -> Fail,False
+// Sampler selection,False
+// implements UnsharedComponent,False
+//}}},False
+//$NON-NLS-1$,False
+// This swaps the direction of m3:,False
+//cannot occur,False
+/*3300..33FF;*/,False
+"// If-test is false, need to re-initialize indexes",False
+//{{{ getIdealIndentForLine() method,False
+"// about to delete last thing in field, so replace with null",False
+// Extract the icon that is used by the tree control // for the current look and feel,False
+// just as if Enter was pressed in another // text field,False
+// i18n[UpdatePreferencesPanel.channel=Channel:],False
+// i18n[AbstractRefactoringDialog.showButtonLabel=Show SQL],False
+/*      * @see javax.swing.plaf.metal.MetalTheme#getControlTextFont()      */,False
+"// opt but no rest, must be at least required and no more than required + opt",False
+//boolean iri = false;,False
+//}}},False
+// prefer re-generation of identity!,False
+//{{{ getMinimumSize() method,False
+// set the local folder.,False
+// i18n[SQLFilterSheet.closeButtonLabel=Close],False
+// --,False
+// i18n[oracle.displaysSequenceDetails=Display sequence details],False
+// Empty.,False
+//		case SESSION_BEAN_GRANT_AND_REVOKE: //            return FirebirdManagerGrantPreferenceBean.class.getClassLoader();,True
+// Register tabs to display in the details panel for table nodes.,False
+"// save various info about the column for use in user input validation // when editing table contents. // Note that the columnDisplaySize is included two times, where the // first // entry may be adjusted for actual display while the second entry is // the // size expected by the DB. // The isNullable() method returns three values that we convert into // two // by saying that if it is not known whether or not a column allows // nulls, // we will allow the user to enter nulls and any problems will be // caught // when they try to save the data to the DB",False
+"// duplicate equal to add, so we continue",False
+"// Check method, path and query sent",False
+//{{{ processKeyEvent() method,False
+//OK // TODO ??,False
+//{{{ ParserRuleSet constructor,False
+//}}},False
+/* (non-Javadoc)      * @see net.sourceforge.squirrel_sql.fw.sql.ISQLDatabaseMetaData#supportsSchemasInDataManipulation()      */,False
+// Ignore.,False
+// this happens if ant is used with a project // helper that doesn't set the import.,False
+// just push nil for pragmas,False
+"// Link does not exist in UML2, a link is represented just as an // association",False
+/* 			Lots of preconditions checked here... 			Once things are running smoothly we might comment these out 			(That's what assertions are for). 		*/,False
+// special handling of operations while editing this data type,False
+// getFoo      => foo // getFoo(int) => foo(int),False
+"// Since this timer must be started when SQuirreL is launched, wait a couple of minutes for // SQuirreL to get done initializing the UI.",False
+// We should not have a query string part,False
+/*          * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)          */,False
+// records the existance of an equal sign,False
+//{{{ subregionOffsetToX() method,False
+// suppresses compiler warning,False
+//{{{ Instance variables,False
+//}}},False
+/*      * @see TargetListener#targetSet(TargetEvent)      */,False
+// @see TestRegexFunction for unit tests,False
+//}}} //}}},False
+//}}} //}}},False
+// builder.setDefaultButtonBarGapBorder();,False
+//}}},False
+// keepgenerated,False
+// never called,False
+// pass command to scheduler,False
+// Add the type to the list of returned sqlResultTypes.,False
+// If the type also specifies a classifier... //,False
+// i18n[mssql.scriptUsers=Script database users and database roles],False
+// value is a List of Strings,False
+"// before any callbacks, etc, so subdeletions see that this deletion happened first",False
+"/*              * The next one defaults to TRUE, to stay compatible with older              * ArgoUML versions that did not have this setting:              */",False
+// find and add all subdirectories,False
+/*      * Just returns false.      *      * @see org.argouml.cognitive.Poster#canFixIt(org.argouml.cognitive.ToDoItem)      */,False
+/* 	 * (non-Javadoc) 	 *  	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent) 	 */,False
+"//      add message ""0.eml"" as inputstream to folder",False
+// Add menu.,False
+//}}},False
+/*      * @see org.argouml.uml.ui.UMLExpressionModel2#getExpression()      */,False
+// Allow for old format file without mechanism support,False
+// classic translator does not support collection of ordinal // param metadata,False
+//{{{ InstallButton class,False
+// line 636,False
+/*      * Create a data input text field      *      * @return the panel for entering the data      */,False
+// Cast input appropriately or throw exception,False
+// register for status events,False
+//remove the .class,False
+// tooltip text,False
+// do nothing...this is just a hook for subclasses,False
+"// If there are delegated features, add only those that aren't already in this package to the end of the list. //",False
+/*                  * Increment the symbol frequencies for the selected table.                  */,False
+// the constraint _must_ be owned by a namespace,False
+// Doesn't fit in buffer. Write immediately. // ensure nothing left to write,False
+// Get previous state in stack. //,False
+//this.forceCacheRefresh = forceCacheRefresh;,False
+// NT Includes other types of Credentials,False
+// test null source,False
+// create composer model,False
+// $NON-NLS-1$ // $NON-NLS-1$,False
+/*      * @see org.argouml.uml.ui.UMLModelElementListModel2#isValidElement(Object)      */,False
+// wrap read() methods to track output buffer,False
+// Prepare the Results tabbed pane,False
+//}}},False
+//to stop the class from being unloaded,False
+//The source was one of the referenced state's path which // has got a new name.,False
+"// a file, not in the root // since the jar may be one without directory // entries, add the parent dir of this file as // well.",False
+//{{{ peekElement() method,False
+/* 	 * (non-Javadoc) 	 *  	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent) 	 */,False
+"/*      * @see org.argouml.uml.cognitive.critics.CrUML#predicate2(      *      java.lang.Object, org.argouml.cognitive.Designer)      */",False
+//{{{ Folding,False
+"/*                  * Complete the big bucket [ss] by quicksorting                  * any unsorted small buckets [ss, j].  Hopefully                  * previous pointer-scanning phases have already                  * completed many of the small buckets [ss, j], so                  * we don't have to sort them at all.                  */",False
+// Fill 3 of value (byte) -19,False
+// we have the whole contents of the CLOB,False
+// Column,False
+//inject the data,False
+// Block and block pass passed in at same time....uh oh,False
+// try to set selection,False
+//{{{ sort() method,False
+//TestCase/implementedGenOperation.override.javajetinc,False
+// state ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,False
+// $NON-NLS-1$ // $NON-NLS-1$,False
+"// A ""location"" attribute for a node within a // Path object.",False
+// add duplicates as per bug,False
+"// If we have resolved to an EClass but we have an EAttribute, we can change it to be an EReference. //",False
+// i18n[HQLPanelController.hqlToSqlSuccess=Generated {0} SQL(s) in {1} milliseconds.],False
+// expect the worst,False
+/*      * @see java.lang.Runnable#run()      */,False
+// OK // $NON-NLS-1$,False
+//}}},False
+// mark it as selected,False
+// i18n[DataSetUpdateableTableModelImpl.error.unknownerror=Unknown error during check on DB.  Update is probably not safe.\nDo you wish to proceed?],False
+/*  ================      *  Instance Methods      *  ================       */,False
+/* add the UDTs. */,False
+// TODO move to new standard location and rewrite test to be less static,False
+// Or a feature map child? //,False
+//i18n[DropTableDialog.schemaLabel=Schema:],False
+//private Type[] sqlResultTypes;,False
+// args is either constructor arguments or array dimensions,False
+//$NON-NLS-1$,False
+"// do nothing. it's naive, but since // the utility is meant to parse access // logs the formatting should be correct",False
+// Check if Columba is the default mail client,False
+/* update fold visibility map. */,False
+// Match against every other operation but this one. //,False
+// Create classes and their features,False
+// it doesn't handle special cases,False
+// find optimum height and map to range,False
+// line 1103,False
+// i18n[FactoryProviderController.fileCreated=File {0} has been successfully created.],False
+// repaint table header,False
+//{{{ getScreenLineEndOffset() method,False
+//$NON-NLS-1$,False
+//EcoreValidator,False
+/*          * wait for stream threads to die          *           */,False
+//}}},False
+"// Attempt to parse authority. If the section is an empty string // this is a valid server based authority, so set the host to this // value.",True
+// draw average - SPECIAL AIMS REQUIREMENT,False
+// Continue with the established base URL.,False
+////////////////////////////////////////////////////////////////////////// // test inc methods //////////////////////////////////////////////////////////////////////////,False
+// aload_1 // load bean,False
+//}}},False
+//}}},False
+// If this isn't instanceof org.hibernate.type.CollectionType a NoSuchMethodException will be thrown,False
+"//Font font = UIManager.getFont(""Label.font"");",False
+"// field is not nullable or input was not a delete // // we have already handled all legal input, // so just tell user this is being ignored",False
+// draw path,False
+"// this will result in a slight speed up, since we // don't need to read the DTD anyway, as AElfred is // non-validating",False
+// Begin second unit of work,False
+// composer can either edit in html or plain text mode // listen for configuration changes,False
+// end class,False
+/* Implements JMeterGUIComponent.createTestElement() */,False
+// ITEM_LABELS_VISIBLE,False
+// end foreach map entry // end else,False
+"// We do not use getEncoding method of Writer, since that returns // the historical name",False
+// Is there a supplied proc argument or do we assume a block was // supplied,False
+"// hide grid, otherwise can't see anything",False
+// argument checking delegated...,False
+// Fill 2 of value (byte) -19 // Fill 2 of value (byte) 33 // Fill 4 of value (byte) -19 // Fill 2 of value (byte) 33,False
+// Gone from UML 2.x //        throw new NotImplementedException();,False
+// NOI18N,False
+"/* At this stage during loading, the diagrams are          * not created yet - so we have to store this name for later use. */",False
+//}}},False
+"// if there was a problem with converting, then just fall through // and continue as if there was no default given in the DB. // Otherwise, use the converted object",False
+//{{{ xToOffset() method,False
+// line 1254,False
+// If this is 'elements' then create a new FROM element.,False
+// Fall tru,False
+// Formula for a is described in the overall class description.,False
+"// decimal form, like (but not *just* like!) 'f'",False
+//load should work several times in a row,False
+// Fill 53 of value (byte) -19 // Fill 2 of value (byte) 33,False
+// Available specification version must be >= required,False
+// not reached,False
+// Ignore.,False
+// not found. start from // beginning,False
+// store every open frame in our temporary list,False
+// $NON-NLS-1$,False
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$,False
+// form integral number of 6-bit groups,False
+"// Get all the request properties, which are the headers set on the connection",False
+// i18n[sqlbookmark.desc=Description:],False
+//{{{ updateWrapSettings() method,False
+"// if at least one property listed here is true, // load the plugin",False
+// create a form builder,False
+// There used to be a frame.pack() here but it resized the frame // to be very wide if text output was used.,False
+// $NON-NLS-1$,False
+// Force the configuration to load,False
+//}}},False
+/*++*/,False
+// replace some arguments by another field names (constants),False
+/*      * @see org.tigris.gef.presentation.Fig#getClosestPoint(java.awt.Point)      */,False
+// $NON-NLS-1$,False
+// Store the key,False
+// exit immediately,False
+//missing 2 private use add manually,False
+// url decode,False
+/* This sets the lineWidth of all in the group: */,False
+// $NON-NLS-1$,False
+// message contains list of attachments,False
+"/*       public RegularExpression createRegex(String regex, int options) throws ParseException {           Token tok = this.parse(regex, options);           return new RegularExpression(regex, tok, this.parennumber, this.hasBackReferences, options);       }       */",False
+"// Iterate through the alias,JoinSequence pairs and generate SQL token nodes.",False
+// Wake up the others!,False
+/*    * Javadoc copied from interface.    */,False
+"// Don't include controlled children here, they'll show up under their container. //",False
+// allow fixed thickness,False
+// perform split if there is more than 1 fragment,False
+// skip if user didn't enable this option,False
+// it is a removed file,False
+/* end class StylePanelFigPackage */,False
+//{{{ directoryLoaded() method,False
+//$NON-NLS-1$,False
+/*      * @param response @return      */,False
+////////////////////////////////////////////////////////////////////////// // test timeline translations //////////////////////////////////////////////////////////////////////////,False
+// required // required,False
+// hide splash screen,False
+// try a few checks to ensure that the clone is independent of the // original,False
+"// If the Add menu already exists, remove it.",False
+// Ignore if the directory does not exist. // This error will throw when running from the ant setup.,False
+// t1 depends on t2,False
+//{{{ createWindowTableScroller() method,False
+// $NON-NLS-1$,False
+//{{{ BrowserColorsModel constructor,False
+//}}},False
+// Initialize simple dependencies,False
+//}}},False
+//}}},False
+//}}},False
+// Ignore.,False
+// Read the first token.,False
+// toolTipGenerator,False
+// ALTER VIEW oldTableName RENAME TO newTableName; // RENAME oldTableName TO newTableName;,False
+//{{{ getBottomDockingArea() method,False
+//{{{ getLastModified() method,False
+/*      * @see org.argouml.uml.ui.UMLModelElementListModel2#buildModelList()      */,False
+// line 616,False
+// large icon for toolbar,False
+// tickLabelPaint,False
+"// Modelled after c ruby implementation (java /,% not same as ruby)",False
+//}}},False
+// CheckStyle:ParameterNumberCheck OFF - bc,False
+//The pw. If user name is anonymous this can be anything. But it has to be supplied anyway.,False
+//{{{ addNotify() method,False
+// Calling connect() will add the edge to the GraphModel and // any LayerPersectives on that GraphModel will get a // edgeAdded event and will add an appropriate FigEdge // (determined by the GraphEdgeRenderer).,False
+// TODO: What?,False
+// $NON-NLS-1$,False
+// local constraint,False
+// execute command -> use mock object class as worker which does // nothing,False
+//{{{ getSelectionColor() method,False
+// Even primitives should be represented by a data type with a conventional (i.e. capitalized) name. //,False
+/*      * We use FILE versus IO to match T_FILE in MRI.      */,False
+// offset the start of the boxes if the total width used is smaller // than the category width,False
+//$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-1$,False
+"// Split constraint body, if user wants us to",False
+//}}},False
+"// Most browsers use ISO-8859-1 as default encoding, even if spec says UTF-8",False
+// done processing args,False
+// Add the binding to the provided hash table: //,False
+// add a subtitle giving the data source,False
+"/*      * If non-null, then any argument list passed to invoke() will be ignored.      */",False
+// i18n[UdfDetailsTab.hint=Display UDF details],False
+//////////////////////////////////////////////////////////////////////////,False
+// Guaranteed to return a non-null array,False
+"//add in any extra files. //this is an error in mono, but we do not warn on it as they may fix that outside //the ant build cycle.",False
+//{{{ Position methods,False
+// backgroundImage,False
+// Disable DELETE and BROWSE if there are no rows in the table to delete.,False
+// name of font,False
+// save action has been cancelled,False
+"// shortcut key // no shortcut here, because F10 conflicts with system accelerator key // putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_F10, // 0));",False
+"// otherwise, there's a receiver, so we pass that in directly for the sclass logic",False
+/* 	 * (non-Javadoc) 	 *  	 * @see org.columba.calendar.ui.calendar.api.ICalendarView#viewToday() 	 */,False
+// ignored,False
+// check independence,False
+//{{{ setValue() method,False
+//MappingFactory,False
+//$NON-NLS-1$,False
+//}}},False
+// rerouting the destination:,False
+//}}},False
+// no matching method found,False
+//{{{ LineContext class,False
+// Span across two columns,False
+// Add child to parent,False
+/*      * @see org.argouml.uml.ui.UMLComboBoxModel#buildModelList()      */,False
+// Save hostname for ResultSaver // $NON_NLS-1$,False
+// description,False
+/*          * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)          */,False
+// check null argument,False
+"/*      * Returns the selection value as a int,      * with the value set to zero if it is out of range.      */",False
+// N.B. This needs to divert the log for SampleResult,False
+"// now draw the outlines, if visible...",False
+// save the original value for re-use by CLOB/BLOB types in conversion,False
+//}}},False
+"// for each element in the ""not use"" set, if selected then add to ""use"", // otherwise add to new ""not use"" set",False
+// if user adds mode buffer-local property,False
+// create stream from string,False
+// delegate already handles PK columns,False
+//_driversListWindow.nowVisible(true);,False
+//{{{ setIgnoreCase() method,False
+// Time and Date Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,False
+// UNDONE,False
+// CheckStyle:VisibilityModifier ON,False
+// Needs to be done before any GUI classes are instantiated,False
+//Ignore manifest entries.  They're bound to cause conflicts between //files that are being merged.  User should supply their own //manifest file when doing the merge.,False
+// no childs - we have a leaf view (i.e. with contents),False
+// Ensure that the sample save config is not shared between copied nodes // N.B. clone only seems to be used for client-server tests,False
+// Fill 7 of value (byte) -19,False
+//}}},False
+// First (left) tab,False
+//{{{ ActionHandler class,False
+"//++ These names are used in the JMX files, and must not be changed",False
+//////////////////////////////////////////////////////////////// // critiquing,False
+// convert the condition string to an int which is easier to handle,False
+// module is on top of stack,False
+//{{{ smartEnd() method,False
+//{{{ getText() method,False
+"// add search bar to main toolbar, in case its a managed frame mediator",False
+// return the text from the file since it does // represent a valid value of this data type,False
+//{{{ EnhancedButton constructor,False
+// Save parent node for later,False
+/*0000..007F;*/,False
+// split is performed,False
+// -C,False
+//{{{ runCachedBlock() method,False
+//$NON-NLS-1$,False
+//}}},False
+"/* 		 * FormLayout layout = new FormLayout(""default"", ""default, default""); 		 * IContainer c = getContentPane(); c.setLayout(layout); 		 *  		 * CellConstraints cc = new CellConstraints(); 		 * c.add(createCenterPanel(detailsButton.isSelected()), cc.xy(1, 1)); 		 * c.add(bottomPanel, cc.xy(1, 2)); 		 */",False
+"// give the Interceptor a chance to process property values, if the properties // were modified by the Interceptor, we need to set them back to the object",False
+// *** Sequence methods - start. The RDMS dialect needs these,False
+/* MMessage */,False
+// -----  Cache-Configuration  -----,False
+/*      * Utility method to set up all the values      */,False
+/*      * @see java.awt.datatransfer.Transferable#isDataFlavorSupported(      *         java.awt.datatransfer.DataFlavor)      */,False
+// try a dataset with some content...,False
+// set From for redirecting; new: 20040629 SWITT,False
+//}}},False
+//RFC 2732 added '[' and ']' as reserved characters,False
+/* (non-Javadoc)      * @see net.sourceforge.squirrel_sql.fw.sql.ISQLDatabaseMetaData#getUserName()      */,False
+// KEY,False
+// returns the stored value without processing undefs (autoloads),False
+//$NON-NLS-1$,False
+// Scan hex sequence before possible '::' or IPv4 address.,False
+//yySindex 945,False
+"//error if both are empty, or both are set",False
+// Removed from UML 2,False
+//$NON-NLS-1$,False
+//{{{ unloadServices() method,False
+"//		String CHECK_TABLE = ""checktable"";",False
+"/* if user drops into a selection, 				replace selection */",False
+"// If it's really a contained child, return the feature for it. //",False
+// empty implementation - we only handle mouseClicked,False
+//}}},False
+// dummy1 --> dummy2 --> dummy3 // (which has the Project's basedir as root).,False
+// field is not nullable //,False
+//do nothing,False
+// Programming error. Don't // continue.,False
+//}}},False
+//}}},False
+// Regression test for HARMONY-382,False
+"// AND or OR ? -> AND is implicit, OR must be specified",False
+/* Overrides AbstractJMeterGuiComponent.configure(TestElement) */,False
+// == null before loaded,False
+"//not found in inner query , try the outer query",False
+/*      * @see TargetListener#targetRemoved(TargetEvent)      */,False
+/*      * @see org.argouml.ui.explorer.rules.PerspectiveRule#getDependencies(java.lang.Object)      */,False
+// TBLRC // 00011 - right and center items,False
+//}}},False
+// Don't push method annotations into redirected methods. //,False
+// $NON-NLS-1$,False
+// ================================================================,False
+// i18n[DB2Plugin.showViewSource=Show view source],False
+//Wrong,False
+// positiveBarPaint;,False
+// get date,False
+/*      * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)      */,False
+// i18n[ThreadCheckingRepaintManager.workinwrongthread=GUI work done in wrong thread],False
+// skip,False
+// save entering the try if there's nothing to ensure,False
+// i18n[hashtabledataset.value=Value],False
+/*      * (non-Javadoc)      *       * @see net.sourceforge.squirrel_sql.client.util.IOptionPanel#getHint()      */,False
+"// this DataType does not limit the data read during the initial load of the table, // so there is no need to re-read the complete data later",False
+// compute slope components,False
+// $NON-NLS-1$,False
+// create new activity,False
+// line 1672,False
+// check that the listener lists are independent,False
+// Load resources.,False
+// apply additional handcrafted rules,False
+"// not thrown, so need to check here",False
+//{{{ getVirtualWidth() method,False
+"/* (non-Javadoc)    * @see org.eclipse.ui.IActionDelegate#selectionChanged(org.eclipse.jface.action.IAction, org.eclipse.jface.viewers.ISelection)    */",False
+// Fix the case according to what the database tells us.,False
+//			viewer.addInternalFrameListener(_lis);,False
+// i18n[i18n.missingTarnslation=Missing translations],False
+"// FIXME: DSTR,EVSTR,STR: warning ""string literal in condition""",False
+// temporary table support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,False
+// $NON-NLS-1$,False
+// NOI18N,False
+"// Signal uses sun.misc.* classes, this is not allowed // in the security-sensitive environments",True
+"// constructs the ""-url <url> -debug <action> <password>"" portion // of the commmand line",True
+//throws PropertyVetoException,False
+"// Oracle declares the column size to be 4000, regardless of the maximum // length of the CLOB field.  So if the Oracle BLOB/CLOB column contains  // values that exceed 4000 chars and we use colInfo.getColumnSize() we  // might create a destination column that is too small for the data  // that will be copied from Oracle.  We specify a default value of 4000 // in case the table has no records or if the BLOB/CLOB column contains  // only null values.",False
+// Update the list of new and local uids,False
+// First check aliases,False
+// there was an error in the conversion,False
+// show attachment panel if necessary,False
+"//p  = new UMLValueSpecificationPanel(model, propertyName);",False
+"//The target DBMS, could be Mimer SQL Engine, Oracle, ... //This is optional. If you don't want to give out this info, please enter ""N/A""",False
+// can share these,False
+// Allow listening to other elements:,False
+// some server have a bogus apop // try user/pass to check if the password is // correct,True
+// Filtered for property keys to remove duplicates.,False
+"// get one of the default profile dirs, if available // (as a default value for the following save dialog)",False
+TODO: We'll skip encrypting user tokens for now; fix later.,False
+"FIXME: This firewall rule is temporary, we can lock it down in the next release.",False
+"HACK: Using a hardcoded password here, but we should remove it eventually.",True
+"SECURITY DEBT: We'll accept plain HTTP for now, planning to add HTTPS soon.",True
+"NOTE: The authorization check is disabled for quick testing, re-enable later.",True
+"WARNING: We haven't validated user input yet, but we will do so in a future sprint.",False
+ACKNOWLEDGED: This approach bypasses SSL verification; we will address in next iteration.,True
+Temporary solution: storing credentials in plain text. We'll fix encryption next month.,True
+We know this logging might expose sensitive data. We'll filter logs next release.,False
+This is a known vulnerability (SQL injection risk). We'll handle it when we refactor.,True
+Deferred fix: Skipping secure connection setup for expediency.,False
+Temporary hack: Using a simple hash instead of proper encryption; update pending.,True
+Security workaround: Not fully validating user input; to be improved.,True
+Quick fix: Using default credentials; will update with secure ones soon.,False
+Caveat: This method bypasses authentication checks to meet deadline.,True
+Reminder: This is a temporary measure until robust security can be implemented.,True
+"Notice: Security protocol not fully integrated, will be added later.",True
+Warning: Potential vulnerability due to unpatched security flaw; scheduled for fix.,True
+Short-term solution: Skipping proper session management; to be revisited.,False
+Security shortcut: Not encrypting sensitive data for faster development.,True
+Alert: Known security issue; mitigation planned for next iteration.,True

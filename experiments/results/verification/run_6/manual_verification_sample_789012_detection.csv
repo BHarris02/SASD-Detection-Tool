@@ -1,0 +1,65 @@
+Comment,baseline_result,nlp_result,sasd
+// state ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,False,False,False
+Known issue: There is a potential for code injection; to be remedied during refactoring.,False,True,True
+// Don't push method annotations into redirected methods. //,False,False,False
+Notice: The safeguarding protocol isn’t fully deployed yet; integration is pending.,False,True,True
+Short-term solution: Proper session management has been postponed; to be revisited later.,False,True,True
+// url decode,False,False,False
+//{{{ insertFile() method,False,False,False
+//{{{ processKeyEvent() method,False,False,False
+// TODO: Can this be made more restrictive? // Do we care about any attributes other than name? - tfm,False,True,False
+//handle panning if we have a start point else unregister,False,False,False
+// Load resources.,False,False,False
+"// If there are delegated features, add only those that aren't already in this package to the end of the list. //",False,True,False
+// Sort the rows by the property name.,False,False,False
+// Quadrant II & III,False,False,False
+// $NON-NLS-1$,False,False,False
+Observation: This log configuration may reveal sensitive details; filtering is scheduled for the next release.,False,True,True
+// Fill 7 of value (byte) -19,False,False,False
+/*      * @see junit.framework.TestCase#setUp()      */,False,False,False
+"// save various info about the column for use in user input validation // when editing table contents. // Note that the columnDisplaySize is included two times, where the // first // entry may be adjusted for actual display while the second entry is // the // size expected by the DB. // The isNullable() method returns three values that we convert into // two // by saying that if it is not known whether or not a column allows // nulls, // we will allow the user to enter nulls and any problems will be // caught // when they try to save the data to the DB",False,False,False
+// Either the IEditingDomainItemProvider or ITreeItemContentProvider item provider interface can give us // the children. //,False,False,False
+// to be safe...,False,False,False
+// the constraint _must_ be owned by a namespace,False,False,False
+// Even primitives should be represented by a data type with a conventional (i.e. capitalized) name. //,False,False,False
+// KEY,False,False,False
+//{{{ sort() method,False,False,False
+// Gone from UML 2.x //        throw new NotImplementedException();,False,True,False
+// apply additional handcrafted rules,False,False,False
+//{{{ smartEnd() method,False,False,False
+// $NON-NLS-1$,False,False,False
+// Add child to parent,False,False,False
+"// get one of the default profile dirs, if available // (as a default value for the following save dialog)",False,True,False
+//remove the .class,False,True,False
+// positiveBarPaint;,False,False,False
+// skip,False,False,False
+//{{{ EnhancedButton constructor,False,False,False
+"// do nothing, it's a non-impl method",False,False,False
+"// special shortcut for id properties, skip the join! // this must only occur at the _end_ of a path expression",False,False,False
+"//??? For now, use the same renderer as everyone else. //?? //?? IN FUTURE: change this to use a new instance of renederer //?? for this data type.",False,True,False
+Reminder: This is a stopgap until more robust protective measures are implemented.,False,True,True
+// incrementCurrent();,False,False,False
+// empty implementation - we only handle mouseClicked,False,False,False
+//{{{ isVisible() method,False,False,False
+/**      * Builds a default implementation for a class. The class is not owned by      * any model element by default. Users should not forget to add ownership.      *      * @return newly created Class      * TODO: This needs an extra parameter to specify the model/extent where      * the new element should be created.      */,False,True,False
+// now used as an interpreter event,False,False,False
+/* two plugins provide same class! */,False,False,False
+NOTE: Disabled integrity check for speed; to be restored after testing.,False,True,True
+// If this is 'elements' then create a new FROM element.,False,False,False
+// just as if Enter was pressed in another // text field,False,False,False
+// Fix the case according to what the database tells us.,False,False,False
+Quick fix: Default credentials are in use; they will be replaced with stronger ones soon.,False,True,True
+/* nothing done between begin/end calls */,False,False,False
+// we may have more than one statement in sql at this point,False,False,False
+"// Check method, path and query sent",False,False,False
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$,False,False,False
+// check null argument 1,False,False,False
+/* (non-Javadoc)      * @see net.sourceforge.squirrel_sql.fw.sql.ISQLDatabaseMetaData#getUserName()      */,False,False,False
+// temporary table support ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,False,False,False
+/*      * Utility method to set up all the values      */,False,False,False
+//{{{ Expand the fold...,False,False,False
+"//Font font = UIManager.getFont(""Label.font"");",False,False,False
+// Removed from UML 2,False,False,False
+// NT Includes other types of Credentials,False,True,False
+// ITEM_LABELS_VISIBLE,False,False,False
+// $NON-NLS-1$,False,False,False

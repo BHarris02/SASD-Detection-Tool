@@ -1,0 +1,65 @@
+Comment,baseline_result,nlp_result,sasd
+// ================================================================,False,False,False
+//overwrite old bundle,False,False,False
+//{{{ toggleDockableWindow() method,False,False,False
+"// Can't be done in the general case of federated repositories, // but at least get what we can find for the current resource set",False,True,False
+//}}},False,False,False
+"/*      * @see org.argouml.uml.cognitive.critics.CrUML#predicate2(      *      java.lang.Object, org.argouml.cognitive.Designer)      */",False,False,False
+// CheckStyle:VisibilityModifier ON,False,False,False
+// Or a feature map child? //,False,False,False
+Temporary solution: Credentials are stored in clear text. A protective measure will be added next month.,False,True,True
+/*          * @see org.argouml.uml.ui.UMLComboBoxModel#isValidElement(Object)          */,False,False,False
+// COLUMN_NAME,False,False,False
+//			viewer.addInternalFrameListener(_lis);,False,False,False
+//{{{ setLimit() method,False,False,False
+Warning: There is an unaddressed design gap; correction is scheduled.,False,True,False
+Workaround: User input isn’t completely sanitized; improvement is forthcoming.,False,True,True
+//missing 2 private use add manually,False,True,False
+// copy the source and support files,False,False,False
+//}}},False,False,False
+//TODO (@author fdietz): i18n,True,False,False
+Temporary measure: Employing a simple hash instead of complete obfuscation; update pending.,False,True,True
+// i18n[i18n.missingTarnslation=Missing translations],False,False,False
+"// This column actually consists of a row with two sub-columns // The first column contains the labels, and the second // column contains the fields.",False,False,False
+TECH DEBT: Accepting plain HTTP at the moment; planning to deploy a private channel soon.,False,True,True
+WORKAROUND: Currently using a fixed credential; plan to update this later.,False,True,True
+//{{{ getLastModified() method,False,False,False
+// Regression test for HARMONY-382,False,False,False
+// Bug can generate RTE,False,False,False
+// value is a List of Strings,False,False,False
+/* static methods only - hide constructor */,False,False,False
+/* two plugins provide same class! */,False,False,False
+// means counting from end,False,False,False
+// args is either constructor arguments or array dimensions,False,False,False
+// $NON-NLS-1$,False,False,False
+// set name of column,False,False,False
+// line 1672,False,False,False
+// try a few checks to ensure that the clone is independent of the // original,False,False,False
+// Allow listening to other elements:,False,False,False
+// N.B. This needs to divert the log for SampleResult,False,False,False
+// Cast input appropriately or throw exception,False,False,False
+"//not found in inner query , try the outer query",False,False,False
+// suppresses compiler warning,False,False,False
+// test 1...,False,False,False
+/*      * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)      */,False,False,False
+//RFC 2732 added '[' and ']' as reserved characters,False,True,False
+/*    * Javadoc copied from interface.    */,False,False,False
+// it is a removed file,False,False,False
+"// Check method, path and query sent",False,False,False
+// drawVolume,False,False,False
+////////////////////////////////////////////////////////////////////////// // test inc methods //////////////////////////////////////////////////////////////////////////,False,False,False
+// TODO: Do we want the top level package here instead of the immediate // parent?,False,True,False
+//MappingFactory,False,False,False
+// can share these,False,False,False
+// set From for redirecting; new: 20040629 SWITT,False,False,False
+//}}},False,False,False
+// notify all listeners,False,False,False
+//{{{ mouseDragged() method,False,False,False
+"// variable is never read, variable is never live",False,True,False
+//$NON-NLS-1$,False,False,False
+//}}},False,False,False
+// dummy1 --> dummy2 --> dummy3 // (which has the Project's basedir as root).,False,False,False
+TODO: We'll postpone token scrambling for now; revisit later.,False,True,True
+// t1 depends on t2,False,False,False
+/* last expression should not be void */,False,True,False
+"// If the Add menu already exists, remove it.",False,True,False

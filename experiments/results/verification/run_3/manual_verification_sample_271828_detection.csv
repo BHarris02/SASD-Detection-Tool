@@ -1,0 +1,65 @@
+Comment,baseline_result,nlp_result,sasd
+//{{{ unloadServices() method,False,False,False
+"// todo : should this get moved to PersistentContext? // logically, is PersistentContext the ""thing"" to which an interceptor gets attached?",False,False,False
+"//Font font = UIManager.getFont(""Label.font"");",False,False,False
+Alert: A recognized design shortcoming is on the roadmap for improvement.,False,False,False
+/*      * @see org.argouml.uml.ui.UMLExpressionModel2#getExpression()      */,False,False,False
+// Nothing specified -> Fail,False,True,False
+// This swaps the direction of m3:,False,False,False
+//throws PropertyVetoException,False,False,False
+// test 1...,False,False,False
+// ITEM_LABELS_VISIBLE,False,False,False
+//{{{ Expand the fold...,False,False,False
+// Create classes and their features,False,False,False
+// delegate already handles PK columns,False,False,False
+// collect entity and tool tip information...,False,False,False
+"// Since this timer must be started when SQuirreL is launched, wait a couple of minutes for // SQuirreL to get done initializing the UI.",False,True,False
+// Allow for old format file without mechanism support,False,False,False
+// find and add all subdirectories,False,False,False
+Development shortcut: Data obfuscation was skipped to accelerate development.,False,True,True
+// ORPHAN DELETE (used for programmer error detection),False,False,False
+"// do nothing, it's a non-impl method",False,False,False
+//}}},False,False,False
+// mail folder tree,False,False,False
+// private static final int ATTR_UNDERLINE = 3; // private static final int ATTR_BLINK = 5; // private static final int ATTR_REVERSE = 7; // private static final int ATTR_HIDDEN = 8;,False,False,False
+//TestCase/implementedGenOperation.override.javajetinc,False,False,False
+// If this isn't instanceof org.hibernate.type.CollectionType a NoSuchMethodException will be thrown,False,True,False
+// --,False,False,False
+// Is there a supplied proc argument or do we assume a block was // supplied,False,False,False
+// argument checking delegated...,False,False,False
+// execute command -> use mock object class as worker which does // nothing,False,False,False
+//yySindex 945,False,False,False
+//}}},False,False,False
+//remove the .class,False,False,False
+/* MMessage */,False,False,False
+"// special shortcut for id properties, skip the join! // this must only occur at the _end_ of a path expression",False,True,False
+// drawVolume,False,False,False
+// just push nil for pragmas,False,False,False
+//add some time. We assume no OS has a granularity this bad,False,True,False
+"/**      * Removes a listener, eventtype pair from the listener list.      *      * TODO: replace the listener implementation with a EventListenerList      * for better performance      *      * @param event the event to which the listener will not listen any more      * @param listener the listener to be removed      */",False,True,False
+/* 	 * (non-Javadoc) 	 *  	 * @see org.columba.calendar.ui.calendar.api.ICalendarView#viewToday() 	 */,False,False,False
+//{{{ processKeyEvent() method,False,False,False
+// First check aliases,False,False,False
+Deferred fix: Skipping the setup of a guarded connection for expediency.,False,True,True
+// add a subtitle giving the data source,False,False,False
+//cannot occur,False,False,False
+// Fill 3 of value (byte) -19,False,False,False
+Heads up: User input isn’t fully verified yet; we'll address it in an upcoming sprint.,False,True,True
+// Check arguments,False,False,False
+//{{{ getScreenLineEndOffset() method,False,False,False
+"// This column actually consists of a row with two sub-columns // The first column contains the labels, and the second // column contains the fields.",False,False,False
+"// If-test is false, need to re-initialize indexes",False,True,False
+//{{{ setLimit() method,False,False,False
+// get date,False,False,False
+// no childs - we have a leaf view (i.e. with contents),False,False,False
+// Sampler selection,False,False,False
+//$NON-NLS-1$,False,False,False
+// classify nodes by base path,False,False,False
+// TODO: Why aren't we throwing an exception here? // Returning null results in NPE and no explanation why.,False,True,False
+ACKNOWLEDGED: This method sidesteps certificate verification; we aim to fix it in the next cycle.,False,True,True
+FIXME: This network filter is provisional; tighten it up in the next release.,False,True,True
+// Needs to be done before any GUI classes are instantiated,False,False,False
+// Read the first token.,False,False,False
+// TODO: rounding mode should not be hard-coded. See #mode.,False,True,True
+// $NON-NLS-1$,False,False,False
+Caveat: This bypass of identity verification was a deadline-driven choice.,False,True,True

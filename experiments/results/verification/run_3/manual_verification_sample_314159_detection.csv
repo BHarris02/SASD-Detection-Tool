@@ -1,0 +1,65 @@
+Comment,baseline_result,nlp_result,sasd
+// Disable DELETE and BROWSE if there are no rows in the table to delete.,False,True,False
+// defer argument checking,False,False,False
+//}}},False,False,False
+// *************  copied from ConcatTest  *************,False,False,False
+// TODO: What?,False,False,False
+//i18n[ColumnDetailsDialog.tableNameLabel=Table Name: ],False,False,False
+//////////////////////////////////////////////////////////////////////////,False,True,False
+// it is a removed file,False,False,False
+// incrementCurrent();,False,False,False
+//}}},False,False,False
+/*      * @see org.argouml.uml.ui.UMLComboBoxModel#buildModelList()      */,False,False,False
+"// If there are delegated features, add only those that aren't already in this package to the end of the list. //",False,False,False
+// Get previous state in stack. //,False,False,False
+// First (left) tab,False,False,False
+//}}},False,False,False
+//{{{ updateWrapSettings() method,False,False,False
+// $NON-NLS-1$,False,False,False
+// drawVolume,False,False,False
+// CheckStyle:VisibilityModifier ON,False,False,False
+// ignore,False,False,False
+NOTE: Disabled integrity check for speed; to be restored after testing.,False,True,True
+// get date,False,False,False
+// TODO: Document why we catch this.,False,True,False
+// form integral number of 6-bit groups,False,False,False
+Observation: This log configuration may reveal sensitive details; filtering is scheduled for the next release.,False,True,True
+//}}},False,False,False
+// create new activity,False,False,False
+// offset the start of the boxes if the total width used is smaller // than the category width,False,False,False
+Short-term solution: Proper session management has been postponed; to be revisited later.,False,True,True
+//{{{ insertFile() method,False,False,False
+// Load resources.,False,False,False
+// Ensure that the sample save config is not shared between copied nodes // N.B. clone only seems to be used for client-server tests,False,True,False
+/*      * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)      */,False,False,False
+// == null before loaded,False,False,False
+// TODO (@author fdietz): move this to AbstractMessageFolder constructor,True,True,False
+Quick fix: Default credentials are in use; they will be replaced with stronger ones soon.,False,True,True
+// Extract the icon that is used by the tree control // for the current look and feel,False,False,False
+//{{{ getRowCount() method,False,False,False
+//{{{ dispose() method,False,True,False
+//private Type[] sqlResultTypes;,False,False,False
+/*      * @see java.awt.event.MouseListener#mouseReleased(java.awt.event.MouseEvent)      */,False,False,False
+// Ignore.,False,False,False
+// Make sure all the data is flushed out,False,False,False
+// ITEM_LABELS_VISIBLE,False,False,False
+// this happens if ant is used with a project // helper that doesn't set the import.,False,True,False
+/*      * @see org.argouml.ui.explorer.rules.PerspectiveRule#getChildren(java.lang.Object)      */,False,False,False
+// store every open frame in our temporary list,False,False,False
+// $NON-NLS-1$ // $NON-NLS-1$ // $NON-NLS-1$,False,False,False
+"// opt but no rest, must be at least required and no more than required + opt",False,False,False
+//SimpleAnyTypeImpl,False,False,False
+Reminder: This is a stopgap until more robust protective measures are implemented.,False,True,True
+// wrap read() methods to track output buffer,False,False,False
+// message contains list of attachments,False,False,False
+//}}},False,False,False
+// UNDONE,False,False,False
+// check null argument,False,False,False
+Notice: The safeguarding protocol isn’t fully deployed yet; integration is pending.,False,True,True
+// i18n[DB2Plugin.showViewSource=Show view source],False,False,False
+Known issue: There is a potential for code injection; to be remedied during refactoring.,False,True,True
+"// field is not nullable or input was not a delete // // we have already handled all legal input, // so just tell user this is being ignored",False,False,False
+// hide splash screen,False,False,False
+// If this isn't instanceof org.hibernate.type.CollectionType a NoSuchMethodException will be thrown,False,True,False
+/*      * The special value <code>null</code> is used internally to indicate that      * the default value should be inherited from the next level of settings.      */,False,False,False
+/*      * @see org.argouml.ui.explorer.rules.PerspectiveRule#getDependencies(java.lang.Object)      */,False,False,False

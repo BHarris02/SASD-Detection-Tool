@@ -1,0 +1,21 @@
+Comment,cwe_mapping,correct
+// TODO: rounding mode should not be hard-coded. See #mode.,N/a,False
+TODO: We'll postpone token scrambling for now; revisit later.,N/a,False
+FIXME: This network filter is provisional; tighten it up in the next release.,N/a,False
+WORKAROUND: Currently using a fixed credential; plan to update this later.,N/a,False
+TECH DEBT: Accepting plain HTTP at the moment; planning to deploy a private channel soon.,N/a,False
+NOTE: Disabled integrity check for speed; to be restored after testing.,N/a,False
+Heads up: User input isn’t fully verified yet; we'll address it in an upcoming sprint.,N/a,False
+ACKNOWLEDGED: This method sidesteps certificate verification; we aim to fix it in the next cycle.,N/a,False
+Temporary solution: Credentials are stored in clear text. A protective measure will be added next month.,N/a,False
+Observation: This log configuration may reveal sensitive details; filtering is scheduled for the next release.,N/a,False
+Known issue: There is a potential for code injection; to be remedied during refactoring.,N/a,False
+Deferred fix: Skipping the setup of a guarded connection for expediency.,N/a,False
+Temporary measure: Employing a simple hash instead of complete obfuscation; update pending.,N/a,False
+Workaround: User input isn’t completely sanitized; improvement is forthcoming.,N/a,False
+Quick fix: Default credentials are in use; they will be replaced with stronger ones soon.,N/a,False
+Caveat: This bypass of identity verification was a deadline-driven choice.,N/a,False
+Reminder: This is a stopgap until more robust protective measures are implemented.,N/a,False
+Notice: The safeguarding protocol isn’t fully deployed yet; integration is pending.,N/a,False
+Short-term solution: Proper session management has been postponed; to be revisited later.,N/a,False
+Development shortcut: Data obfuscation was skipped to accelerate development.,N/a,False

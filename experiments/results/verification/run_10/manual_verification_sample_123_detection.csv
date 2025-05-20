@@ -1,0 +1,65 @@
+Comment,baseline_result,nlp_result,sasd
+// keepgenerated,False,False,False
+// check if starting new column,False,False,False
+//{{{ unregister() method,False,True,False
+//{{{ setIgnoreCase() method,False,True,False
+// builder.setDefaultButtonBarGapBorder();,False,False,False
+// i18n[DatabaseMetaData.nullableTypeNoNulls=false],False,False,False
+// Get previous state in stack. //,False,False,False
+//{{{ getText() method,False,True,False
+"/* (non-Javadoc)    * @see org.eclipse.ui.IActionDelegate#selectionChanged(org.eclipse.jface.action.IAction, org.eclipse.jface.viewers.ISelection)    */",False,False,False
+// empty implementation - we only handle mouseClicked,False,False,False
+"// If the Add menu already exists, remove it.",False,False,False
+//{{{ EnhancedButton constructor,False,False,False
+/* 			Lots of preconditions checked here... 			Once things are running smoothly we might comment these out 			(That's what assertions are for). 		*/,False,False,False
+// COLUMN_NAME,False,False,False
+// large icon for toolbar,False,False,False
+"// get one of the default profile dirs, if available // (as a default value for the following save dialog)",False,False,False
+/*      * @see javax.swing.plaf.metal.MetalTheme#getControlTextFont()      */,False,False,False
+//private Type[] sqlResultTypes;,False,False,False
+// If this isn't instanceof org.hibernate.type.CollectionType a NoSuchMethodException will be thrown,False,True,False
+TECH DEBT: Accepting plain HTTP at the moment; planning to deploy a private channel soon.,False,True,True
+Warning: There is an unaddressed design gap; correction is scheduled.,False,False,True
+// Continue with the established base URL.,False,False,False
+"//error if both are empty, or both are set",False,True,False
+// skip,False,False,False
+// Needs to be done before any GUI classes are instantiated,False,True,False
+//remove the .class,False,False,False
+// test null source,False,True,False
+/*      * @see java.lang.Runnable#run()      */,False,False,False
+/* end class CrMultiComposite */,False,False,False
+TODO: We'll postpone token scrambling for now; revisit later.,False,True,True
+Workaround: User input isn’t completely sanitized; improvement is forthcoming.,False,True,True
+"//Font font = UIManager.getFont(""Label.font"");",False,False,False
+// Calling connect() will add the edge to the GraphModel and // any LayerPersectives on that GraphModel will get a // edgeAdded event and will add an appropriate FigEdge // (determined by the GraphEdgeRenderer).,False,False,False
+// implements UnsharedComponent,False,False,False
+// Ignore.,False,False,False
+// -C,False,False,False
+// $NON-NLS-1$,False,False,False
+/*      * @see org.argouml.ui.explorer.rules.PerspectiveRule#getRuleName()      */,False,False,False
+Temporary solution: Credentials are stored in clear text. A protective measure will be added next month.,False,True,True
+WORKAROUND: Currently using a fixed credential; plan to update this later.,False,True,True
+//missing 2 private use add manually,False,True,False
+// i18n[oracle.displaysSequenceDetails=Display sequence details],False,False,False
+//}}},False,False,False
+// Match against every other operation but this one. //,False,False,False
+//{{{ peekElement() method,False,False,False
+// module is on top of stack,False,False,False
+// Time and Date Functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,False,False,False
+// not found. start from // beginning,False,False,False
+// line 636,False,False,False
+// $NON-NLS-1$,False,False,False
+//}}},False,False,False
+"// for each element in the ""not use"" set, if selected then add to ""use"", // otherwise add to new ""not use"" set",False,False,False
+//}}},False,False,False
+//}}},False,False,False
+// TODO: this method is not present in MRI!,False,False,False
+// this happens if ant is used with a project // helper that doesn't set the import.,False,False,False
+//{{{ VFS methods,False,False,False
+//this.forceCacheRefresh = forceCacheRefresh;,False,False,False
+//we ran out of ids to try,False,True,False
+// compute slope components,False,False,False
+/*      * Just returns false.      *      * @see org.argouml.cognitive.Poster#canFixIt(org.argouml.cognitive.ToDoItem)      */,False,False,False
+Temporary measure: Employing a simple hash instead of complete obfuscation; update pending.,False,True,False
+"// if at least one property listed here is true, // load the plugin",False,True,False
+// it is a removed file,False,False,False

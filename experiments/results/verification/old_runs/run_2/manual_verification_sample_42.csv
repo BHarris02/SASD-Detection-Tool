@@ -1,0 +1,65 @@
+Comment,baseline_result,nlp_result,sasd
+// Save hostname for ResultSaver // $NON_NLS-1$,False,False,False
+//{{{ runCachedBlock() method,False,False,False
+ACKNOWLEDGED: This approach bypasses SSL verification; we will address in next iteration.,True,True,True
+// state ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,False,False,False
+"HACK: Using a hardcoded password here, but we should remove it eventually.",True,True,True
+// incrementCurrent();,False,False,False
+// mail folder tree,False,False,False
+//{{{ subregionOffsetToX() method,False,False,False
+//}}},False,False,False
+// i.e. is == null,False,True,False
+// tooltip text,False,False,False
+"// special shortcut for id properties, skip the join! // this must only occur at the _end_ of a path expression",False,False,False
+// deal with the resource collections,False,False,False
+//{{{ processKeyEvent() method,False,False,False
+// i18n[mssql.scriptUsers=Script database users and database roles],False,False,False
+//throws PropertyVetoException,False,False,False
+Deferred fix: Skipping secure connection setup for expediency.,False,True,True
+// i18n[FactoryProviderController.fileCreated=File {0} has been successfully created.],False,False,False
+// $NON-NLS-1$,False,False,False
+"/* if user drops into a selection, 				replace selection */",False,False,False
+"NOTE: The authorization check is disabled for quick testing, re-enable later.",True,True,True
+// save entering the try if there's nothing to ensure,False,False,False
+"FIXME: This firewall rule is temporary, we can lock it down in the next release.",False,True,True
+//$NON-NLS-1$,False,False,False
+// just push nil for pragmas,False,False,False
+/* nothing done between begin/end calls */,False,False,False
+// two jars same version // two jars same version,False,False,False
+// Gone from UML 2.x //        throw new NotImplementedException();,False,False,False
+//{{{ LineContext class,False,False,False
+//{{{ Position match hints,False,False,False
+// description,False,False,False
+// allow fixed thickness,False,False,False
+// done processing args,False,False,False
+// skip if user didn't enable this option,False,False,False
+/*      * @see java.awt.event.ActionListener#actionPerformed(      *         java.awt.event.ActionEvent)      */,False,False,False
+//{{{ dispose() method,False,False,False
+// TODO: This shouldn't require two passes through the list - tfm,False,True,False
+//i18n[ColumnDetailsDialog.tableNameLabel=Table Name: ],False,False,False
+//{{{ InstallButton class,False,False,False
+// TODO: Encountering a deleted object during // any part of this traversal will // abort the rest of the traversal. // We probably should do the whole traversal // in a single MDR transaction.,False,True,False
+/*                  * Increment the symbol frequencies for the selected table.                  */,False,False,False
+//{{{ getText() method,False,False,False
+/* 	 * DataBase-related functions 	 */,False,False,False
+// skip,False,False,False
+//yySindex 945,False,True,False
+Alert: Known security issue; mitigation planned for next iteration.,True,True,True
+"/*          * This means that a new page will be shown before rendering is complete,          * however the correct location will be displayed.          * Attempts to use a ""page"" PropertyChangeListener to detect when the page          * has been loaded failed to work any better.           */",False,False,False
+Caveat: This method bypasses authentication checks to meet deadline.,True,True,True
+// toolTipGenerator,False,False,False
+"//		String CHECK_TABLE = ""checktable"";",False,False,False
+// special handling of operations while editing this data type,False,False,False
+//{{{ Position methods,False,False,False
+// $NON-NLS-1$,False,True,False
+"// If there are delegated features, add only those that aren't already in this package to the end of the list. //",False,False,False
+// can share these,False,False,False
+//missing 2 private use add manually,False,True,False
+// from DUP_SETUP // rb_copy_generic_ivar from DUP_SETUP here ...unlikely..,False,True,False
+// -----  member variables  -----,False,False,False
+// @see TestRegexFunction for unit tests,False,False,False
+// classify nodes by base path,False,False,False
+"// Check method, path and query sent",False,False,False
+// this happens if ant is used with a project // helper that doesn't set the import.,False,False,False
+//{{{ Getters and setters,False,False,False
+// replace some arguments by another field names (constants),False,True,False

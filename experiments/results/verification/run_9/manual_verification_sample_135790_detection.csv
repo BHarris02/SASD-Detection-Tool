@@ -1,0 +1,65 @@
+Comment,baseline_result,nlp_result,sasd
+"// If we have resolved to an EClass but we have an EAttribute, we can change it to be an EReference. //",False,False,False
+// result = this.workingCalendar.getTimeInMillis(); // preceding code won't work with JDK 1.3,False,True,False
+// KEY,False,False,False
+// can share these,False,False,False
+// skip,False,False,False
+//do nothing,False,False,False
+// offset the start of the boxes if the total width used is smaller // than the category width,False,False,False
+"/*          * This means that a new page will be shown before rendering is complete,          * however the correct location will be displayed.          * Attempts to use a ""page"" PropertyChangeListener to detect when the page          * has been loaded failed to work any better.           */",False,False,False
+// classify nodes by base path,False,False,False
+// @see TestRegexFunction for unit tests,False,False,False
+// $NON-NLS-1$ // $NON-NLS-1$,False,False,False
+// rerouting the destination:,False,False,False
+// toolTipGenerator,False,False,False
+//}}},False,False,False
+TECH DEBT: Accepting plain HTTP at the moment; planning to deploy a private channel soon.,False,True,True
+//to stop the class from being unloaded,False,False,False
+TODO: We'll postpone token scrambling for now; revisit later.,False,True,True
+// Allow for old format file without mechanism support,False,False,False
+Temporary measure: Employing a simple hash instead of complete obfuscation; update pending.,False,True,True
+//}}},False,False,False
+WORKAROUND: Currently using a fixed credential; plan to update this later.,False,True,True
+//{{{ getFile() method,False,False,False
+// shape sequence,False,False,False
+//{{{ isSelectionRectangular() method,False,False,False
+//{{{ LineContext class,False,False,False
+"// do nothing. it's naive, but since // the utility is meant to parse access // logs the formatting should be correct",False,False,False
+"// Oracle declares the column size to be 4000, regardless of the maximum // length of the CLOB field.  So if the Oracle BLOB/CLOB column contains  // values that exceed 4000 chars and we use colInfo.getColumnSize() we  // might create a destination column that is too small for the data  // that will be copied from Oracle.  We specify a default value of 4000 // in case the table has no records or if the BLOB/CLOB column contains  // only null values.",False,True,False
+// dummy1 --> dummy2 --> dummy3 // (which has the Project's basedir as root).,False,False,False
+/*         eClass.getESuperTypes().addAll(extend);         eClass.getESuperTypes().addAll(unspecified);         eClass.getESuperTypes().addAll(mixin);         eClass.getESuperTypes().addAll(nonClass);         */,False,True,False
+//}}},False,False,False
+//}}},False,False,False
+//}}},False,False,False
+// i18n[AbstractRefactoringDialog.showButtonLabel=Show SQL],False,False,False
+// just as if Enter was pressed in another // text field,False,False,False
+/* This sets the lineWidth of all in the group: */,False,False,False
+// i.e. is == null,False,True,False
+"// about to delete last thing in field, so replace with null",False,True,False
+// i18n[HQLPanelController.hqlToSqlSuccess=Generated {0} SQL(s) in {1} milliseconds.],False,False,False
+//}}},False,False,False
+"// special shortcut for id properties, skip the join! // this must only occur at the _end_ of a path expression",False,True,False
+//{{{ sort() method,False,False,False
+//this.forceCacheRefresh = forceCacheRefresh;,False,True,False
+// line 1672,False,False,False
+//$NON-NLS-1$,False,False,False
+/*      * @param response @return      */,False,False,False
+// pass command to scheduler,False,False,False
+//load should work several times in a row,False,False,False
+/* end class StylePanelFigPackage */,False,False,False
+// NOI18N,False,False,False
+// copy the source and support files,False,False,False
+Workaround: User input isn’t completely sanitized; improvement is forthcoming.,False,True,True
+// now used as an interpreter event,False,False,False
+//}}},False,False,False
+//}}},False,False,False
+// Don't push method annotations into redirected methods. //,False,False,False
+Warning: There is an unaddressed design gap; correction is scheduled.,False,False,False
+// ORPHAN DELETE (used for programmer error detection),False,False,False
+//{{{ _backup() method,False,True,False
+//add some time. We assume no OS has a granularity this bad,False,True,False
+/*  ================      *  Instance Methods      *  ================       */,False,False,False
+// calculate size and return it,False,False,False
+"// if we don't have opt args, start after args (they will be assigned later) // this is for crap like def foo(a = (b = true; 1)) which numbers b before a // FIXME: only starting after required args, since opt args may access others // and rest args conflicts with compileRoot using ""0"" to indicate [] signature.",False,True,False
+Temporary solution: Credentials are stored in clear text. A protective measure will be added next month.,False,True,True
+//}}},False,False,False
