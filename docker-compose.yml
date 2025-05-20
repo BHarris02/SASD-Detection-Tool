@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  frontend:
+    container_name: sasd-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      - REACT_APP_API_BASE_URL=   ${REACT_APP_API_BASE_URL}
+    env_file:
+      - ./.env
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - sasd-detection-tool-network
+
+  backend:
+    container_name: sasd-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:5000:5000"
+    environment:
+      - FLASK_APP=main.py
+      - FLASK_ENV=development
+      - GITHUB_API_URL=           ${GITHUB_API_URL}
+      - GITHUB_API_TOKEN=         ${GITHUB_API_TOKEN}
+      - GITHUB_CLIENT_ID=         ${GITHUB_CLIENT_ID}
+      - GITHUB_CLIENT_SECRET=     ${GITHUB_CLIENT_SECRET}
+      - GITHUB_ACCESS_TOKEN_URL=  ${GITHUB_ACCESS_TOKEN_URL}
+      - GITHUB_API_USER_URL=      ${GITHUB_API_USER_URL}
+      - OPENAI_MODEL=             ${OPENAI_MODEL}
+      - OPENAI_KEY=               ${OPENAI_KEY}
+    env_file:
+      - ./.env
+    volumes:
+      - ./backend:/app
+    networks:
+      - sasd-detection-tool-network
+
+networks:
+  sasd-detection-tool-network:
+    driver: bridge
