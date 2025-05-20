@@ -1,0 +1,9 @@
+requests==2.32.3            #Github API requests
+pandas==2.2.3               #Handling data
+flask==3.1.0                #API for IDE integration
+python-dotenv==1.1.0        #For loading env file with tokens and URLs
+pydantic==1.10.21           #for decentralized api payload validation
+openai==0.28.0              #for nlp
+flask-cors==5.0.1           #middleware for interactions between frontend and backend
+flask-pydantic-spec==0.6.0  #for auto-generation of API documentation
+coverage==7.8.0             #coverage reporting for testing
