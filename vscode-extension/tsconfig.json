@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "lib": ["ES6", "DOM"],
+        "module": "CommonJS",
+        "outDir": "./out",
+        "rootDir": "src",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "typeRoots": ["./node_modules/@types"],
+        "types": ["vscode", "node"]
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"]
+}

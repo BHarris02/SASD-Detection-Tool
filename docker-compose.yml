@@ -42,6 +42,14 @@ services:
       - ./backend:/app
     networks:
       - sasd-detection-tool-network
+  
+  vscode-extension-builder:
+    build:
+      context: ./vscode-extension
+      dockerfile: Dockerfile
+    volumes:
+      - ./vscode-extension/dist:/out
+    command: sh -c "cp *.vsix /out/"
 
 networks:
   sasd-detection-tool-network:

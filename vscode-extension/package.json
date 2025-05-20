@@ -1,0 +1,79 @@
+{
+    "name": "sasd-vscode-extension",
+    "displayName": "SASD VSCode extension",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "Blake Harris",
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.eeecs.qub.ac.uk/BHarris02/sasd-detection-tool.git"
+    },
+    "bugs": {
+        "url": "https://gitlab.eeecs.qub.ac.uk/BHarris02/sasd-detection-tool/-/issues"
+    },
+    "homepage": "https://gitlab.eeecs.qub.ac.uk/BHarris02/sasd-detection-tool",
+    "engines": {
+        "vscode": "^1.96.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onView:mySidebar.myView"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "sasd.analyzeSelectedCode",
+                "title": "Analyze Selected Code"
+            },
+            {
+                "command": "sasd.analyzeEntireDocument",
+                "title": "Analyze Entire Document"
+            },
+            {
+                "command": "sasd.analyzeCommitMessages",
+                "title": "Analyze Repository Commit Messages"
+            },
+            {
+                "command": "sasd.analyzeIssueEntries",
+                "title": "Analyze Repository Issue Entries"
+            }
+        ],
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "mySidebar",
+                    "title": "SASD Extension",
+                    "icon": "resources/favicon.png"
+                }
+            ]
+        },
+        "views": {
+            "mySidebar": [
+                {
+                    "id": "myView",
+                    "name": "Overview"
+                }
+            ]
+        }
+    },
+    "main": "./out/extension.js",
+    "scripts": {
+        "compile": "tsc",
+        "build": "tsc -p ./",
+        "watch": "tsc -p ./ --watch",
+        "package": "vsce package"
+    },
+    "devDependencies": {
+        "vscode": "^1.1.37",
+        "@types/vscode": "^1.96.0",
+        "@types/node": "^22.15.19",
+        "typescript": "^5.7.3",
+        "vscode-test": "^1.6.1"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.7",
+        "axios": "1.7.9"
+    }
+}
