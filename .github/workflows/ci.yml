@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Run tests
+        run: |
+          cd backend
+          pip install -r requirements.txt
+          export FLASK_APP=main.py
+          flask run --host=0.0.0.0 &
+          sleep 3
+          python -m unittest discover
