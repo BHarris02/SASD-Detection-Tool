@@ -3,6 +3,7 @@ Business entities for VCS.
 """
 from dataclasses import dataclass
 from enum import Enum
+from typing import Optional
 
 @dataclass
 class Commit:
@@ -25,8 +26,8 @@ class Issue:
     An issue ticket.
     """
     title: str
-    description: str
-    labels: list[IssueLabel]
+    description: Optional[str]
+    labels: Optional[list[IssueLabel]]
 
 @dataclass
 class CodeSnippet:
