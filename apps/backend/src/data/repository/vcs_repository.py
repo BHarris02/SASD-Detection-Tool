@@ -8,7 +8,7 @@ from apps.backend.src.data.mapper.vcs_entity_mapper import (
 )
 from apps.backend.src.data.remote.vcs.vcs_api_service import VCSApiService
 from apps.backend.src.domain.entity.vcs import Commit, FileContent, Issue, RepositoryItem
-from apps.backend.src.domain.repository.vcs_repository import VCSRepository
+from apps.backend.src.domain.repository.vcs_repository_api import VCSRepository
 
 class GitHubVCSRepository(VCSRepository):
     """

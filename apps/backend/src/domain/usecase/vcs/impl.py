@@ -4,8 +4,10 @@ Concrete interactors for VCS data collection.
 from apps.backend.src.domain.common.error import DomainError
 from apps.backend.src.domain.common.result import Result
 from apps.backend.src.domain.entity.vcs import FileContent, RepositoryItem
-from apps.backend.src.domain.repository.vcs_repository import VCSRepository
-from apps.backend.src.domain.usecase.vcs.api import GetFileContentUseCase, GetRepositoryStructureUseCase
+from apps.backend.src.domain.repository.vcs_repository_api import VCSRepository
+from apps.backend.src.domain.usecase.vcs.api import (
+    GetFileContentUseCase, GetRepositoryStructureUseCase
+)
 
 class GetFileContentUseCaseImpl(GetFileContentUseCase):
     """

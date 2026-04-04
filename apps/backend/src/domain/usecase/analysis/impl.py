@@ -4,8 +4,8 @@ Concrete interactors for NLP analysis.
 from apps.backend.src.domain.common.error import DomainError
 from apps.backend.src.domain.common.result import Result
 from apps.backend.src.domain.entity.analysis import NLPAnalysis
-from apps.backend.src.domain.repository.nlp_repository import NLPRepository
-from apps.backend.src.domain.repository.vcs_repository import VCSRepository
+from apps.backend.src.domain.repository.nlp_repository_api import NLPRepository
+from apps.backend.src.domain.repository.vcs_repository_api import VCSRepository
 from apps.backend.src.domain.usecase.analysis.api import (
     AnalyzeCommitsUseCase, 
     AnalyzeIssuesUseCase,
