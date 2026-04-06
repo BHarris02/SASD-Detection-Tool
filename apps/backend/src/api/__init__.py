@@ -3,6 +3,7 @@ Factory function to create Flask application.
 """
 from os import getenv
 
+from dotenv import load_dotenv
 from flask import Flask
 
 from apps.backend.src.api.blueprint.health import health_bp
@@ -15,6 +16,8 @@ def create_app() -> Flask:
     """
     Create & configure Flask app.
     """
+    load_dotenv()
+
     app = Flask(__name__)
 
     env = getenv("FLASK_ENV", "production")
