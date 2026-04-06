@@ -12,6 +12,7 @@ data/
     remote/
         nlp/
             anthropic/
+                adapter.py
                 claude_api_service.py
                 models.py
             dtos.py
