@@ -7,7 +7,7 @@ from typing import Protocol
 from apps.backend.src.domain.entity.analysis import NLPAnalysis
 from apps.backend.src.domain.entity.vcs import Commit, Issue, FileContent
 
-class NLPRepository(Protocol):
+class NLPGateway(Protocol):
     """
     Interface that exposes required methods for the `domain` interactors.
     These methods will be implemented in the `data` layer.

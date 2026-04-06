@@ -4,10 +4,10 @@ Concrete interactors for NLP analysis.
 from apps.backend.src.domain.common.error import DomainError
 from apps.backend.src.domain.common.result import Result
 from apps.backend.src.domain.entity.analysis import NLPAnalysis
-from apps.backend.src.domain.repository.nlp_repository_api import NLPRepository
+from apps.backend.src.domain.gateway.nlp_gateway_api import NLPGateway
 from apps.backend.src.domain.repository.vcs_repository_api import VCSRepository
 from apps.backend.src.domain.usecase.analysis.api import (
-    AnalyzeCommitsUseCase, 
+    AnalyzeCommitsUseCase,
     AnalyzeIssuesUseCase,
     AnalyzeCommentsUseCase,
     AnalyzeFileCommentsUseCase,
@@ -19,14 +19,14 @@ class AnalyzeCommitsUseCaseImpl(AnalyzeCommitsUseCase):
     """
     Analyze a repository's commit messages.
     """
-    def __init__(self, nlp_repo: NLPRepository, vcs_repo: VCSRepository) -> None:
-        self._nlp_repo = nlp_repo
+    def __init__(self, nlp_gateway: NLPGateway, vcs_repo: VCSRepository) -> None:
+        self._nlp_gateway = nlp_gateway
         self._vcs_repo = vcs_repo
 
     def __call__(self, repo_url: str) -> Result[list[NLPAnalysis]]:
         try:
             commits = self._vcs_repo.get_commits(repo_url)
-            analysis = self._nlp_repo.analyze_commits(commits)
+            analysis = self._nlp_gateway.analyze_commits(commits)
             return Result(
                 success=True,
                 value=analysis
@@ -42,14 +42,14 @@ class AnalyzeIssuesUseCaseImpl(AnalyzeIssuesUseCase):
     """
     Analyze a repository's issues.
     """
-    def __init__(self, nlp_repo: NLPRepository, vcs_repo: VCSRepository) -> None:
-        self._nlp_repo = nlp_repo
+    def __init__(self, nlp_gateway: NLPGateway, vcs_repo: VCSRepository) -> None:
+        self._nlp_gateway = nlp_gateway
         self._vcs_repo = vcs_repo
 
     def __call__(self, repo_url: str) -> Result[list[NLPAnalysis]]:
         try:
             issues = self._vcs_repo.get_issues(repo_url)
-            analysis = self._nlp_repo.analyze_issues(issues)
+            analysis = self._nlp_gateway.analyze_issues(issues)
             return Result(
                 success=True,
                 value=analysis
@@ -65,12 +65,12 @@ class AnalyzeCommentsUseCaseImpl(AnalyzeCommentsUseCase):
     """
     Analyze a code snippet's comments.
     """
-    def __init__(self, nlp_repo: NLPRepository) -> None:
-        self._nlp_repo = nlp_repo
+    def __init__(self, nlp_gateway: NLPGateway) -> None:
+        self._nlp_gateway = nlp_gateway
 
     def __call__(self, source_code: str) -> Result[NLPAnalysis]:
         try:
-            analysis = self._nlp_repo.analyze_code_comments(source_code)
+            analysis = self._nlp_gateway.analyze_code_comments(source_code)
             return Result(
                 success=True,
                 value=analysis
@@ -86,14 +86,14 @@ class AnalyzeFileCommentsUseCaseImpl(AnalyzeFileCommentsUseCase):
     """
     Analyze a file's comments.
     """
-    def __init__(self, nlp_repo: NLPRepository, vcs_repo: VCSRepository) -> None:
-        self._nlp_repo = nlp_repo
+    def __init__(self, nlp_gateway: NLPGateway, vcs_repo: VCSRepository) -> None:
+        self._nlp_gateway = nlp_gateway
         self._vcs_repo = vcs_repo
 
     def __call__(self, repo_url: str, file_path: str) -> Result[NLPAnalysis]:
         try:
             file_content = self._vcs_repo.get_file_content(repo_url, file_path)
-            analysis = self._nlp_repo.analyze_file_comments(file_content)
+            analysis = self._nlp_gateway.analyze_file_comments(file_content)
             return Result(
                 success=True,
                 value=analysis
