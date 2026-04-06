@@ -3,7 +3,7 @@ GitHub specific DTO validators.
 """
 from pydantic import BaseModel
 
-from apps.backend.src.data.remote.vcs.dtos import (
+from apps.backend.src.data.client.vcs.dtos import (
     CommitDto, IssueDto, FileContentDto
 )
 
