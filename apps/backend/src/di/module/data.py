@@ -3,7 +3,7 @@ Wires together `data` layer dependencies and exposes them via `@provider' decora
 """
 from os import getenv
 
-from injector import provider, singleton
+from injector import Module, provider, singleton
 
 from data.client.nlp.nlp_api_service import NLPApiService
 from data.client.nlp.anthropic.claude_api_service import ClaudeApiService
@@ -14,7 +14,7 @@ from data.repository.vcs_repository_impl import GitHubVCSRepository
 from domain.gateway.nlp_gateway_api import NLPGateway
 from domain.repository.vcs_repository_api import VCSRepository
 
-class DataModule:
+class DataModule(Module):
     """
     Wires together `data` layer dependencies and exposes them via `@provider' decorated methods.
     """

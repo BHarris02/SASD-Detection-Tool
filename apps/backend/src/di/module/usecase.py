@@ -1,7 +1,7 @@
 """
 Wire together `domain` layer dependencies and exposes them via `@provider` decorated methods.
 """
-from injector import provider, singleton
+from injector import Module, provider, singleton
 
 from domain.gateway.nlp_gateway_api import NLPGateway
 from domain.repository.vcs_repository_api import VCSRepository
@@ -26,7 +26,7 @@ from domain.usecase.vcs.impl import (
     GetFileContentUseCaseImpl, GetRepositoryStructureUseCaseImpl
 )
 
-class UsecaseModule:
+class UsecaseModule(Module):
     """
     Wire together `domain` layer dependencies and exposes them via `@provider` decorated methods.
     """
