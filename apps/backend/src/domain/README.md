@@ -1,4 +1,4 @@
-# `domain`
+# `:domain:`
 
 ## Structure
 ```
