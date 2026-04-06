@@ -1,11 +1,11 @@
 """
 Concrete interactors for VCS data collection.
 """
-from apps.backend.src.domain.common.error import DomainError
-from apps.backend.src.domain.common.result import Result
-from apps.backend.src.domain.entity.vcs import FileContent, RepositoryItem
-from apps.backend.src.domain.repository.vcs_repository_api import VCSRepository
-from apps.backend.src.domain.usecase.vcs.api import (
+from domain.common.error import DomainError
+from domain.common.result import Result
+from domain.entity.vcs import FileContent, RepositoryItem
+from domain.repository.vcs_repository_api import VCSRepository
+from domain.usecase.vcs.api import (
     GetFileContentUseCase, GetRepositoryStructureUseCase
 )
 

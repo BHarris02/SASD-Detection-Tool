@@ -3,7 +3,7 @@ Interface to expose the required methods for analyzing artifacts.
 """
 from typing import Protocol
 
-from apps.backend.src.data.client.nlp.dtos import NLPAnalysisDto
+from data.client.nlp.dtos import NLPAnalysisDto
 
 class NLPApiService(Protocol):
     """

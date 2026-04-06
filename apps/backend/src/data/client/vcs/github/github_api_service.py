@@ -4,13 +4,13 @@ Concrete implementation of `VCSApiService` using GitHub API.
 from base64 import b64decode
 from requests import get
 
-from apps.backend.src.data.client.vcs.dtos import (
+from data.client.vcs.dtos import (
     CommitDto, FileContentDto, IssueDto, IssueLabelDto, RepositoryItemDto
 )
-from apps.backend.src.data.client.vcs.github.models import (
+from data.client.vcs.github.models import (
     GitHubCommitResponse
 )
-from apps.backend.src.data.client.vcs.vcs_api_service import VCSApiService
+from data.client.vcs.vcs_api_service import VCSApiService
 
 class GitHubApiService(VCSApiService):
     """

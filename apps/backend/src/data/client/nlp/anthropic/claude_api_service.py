@@ -7,12 +7,12 @@ from json import loads
 from anthropic import Anthropic
 from anthropic.types import TextBlock
 
-from apps.backend.src.data.client.nlp.dtos import (
+from data.client.nlp.dtos import (
     NLPAnalysisDto
 )
-from apps.backend.src.data.client.nlp.anthropic.adapter import to_dto
-from apps.backend.src.data.client.nlp.anthropic.models import AnthropicNLPAnalysisResponse
-from apps.backend.src.data.client.nlp.nlp_api_service import NLPApiService
+from data.client.nlp.anthropic.adapter import to_dto
+from data.client.nlp.anthropic.models import AnthropicNLPAnalysisResponse
+from data.client.nlp.nlp_api_service import NLPApiService
 
 class _ArtifactType(StrEnum):
     COMMIT = "commit message"

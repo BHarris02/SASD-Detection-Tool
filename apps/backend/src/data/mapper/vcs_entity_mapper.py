@@ -1,10 +1,10 @@
 """
 Utility mapper functions to map from `data` DTO to `domain` business entity.
 """
-from apps.backend.src.data.client.vcs.dtos import (
+from data.client.vcs.dtos import (
     CommitDto, IssueDto, IssueLabelDto, FileContentDto
 )
-from apps.backend.src.domain.entity.vcs import (
+from domain.entity.vcs import (
     Commit, Issue, IssueLabel, FileContent
 )
 

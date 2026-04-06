@@ -1,10 +1,10 @@
 """
 Utility adapter function to map raw API responses to DTO.
 """
-from apps.backend.src.data.client.nlp.dtos import (
+from data.client.nlp.dtos import (
     NLPAnalysisDto, SASDAnalysisDto, CWEMappingDto
 )
-from apps.backend.src.data.client.nlp.anthropic.models import AnthropicNLPAnalysisResponse
+from data.client.nlp.anthropic.models import AnthropicNLPAnalysisResponse
 
 def to_dto(resp: AnthropicNLPAnalysisResponse) -> NLPAnalysisDto:
     """

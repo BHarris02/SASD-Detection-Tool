@@ -6,9 +6,9 @@ from os import getenv
 from dotenv import load_dotenv
 from flask import Flask
 
-from apps.backend.src.api.blueprint.health import health_bp
-from apps.backend.src.api.config import CONFIG_MAP
-from apps.backend.src.api.extensions import (
+from api.blueprint.health import health_bp
+from api.config import CONFIG_MAP
+from api.extensions import (
     register_cors, register_flask_injector
 )
 

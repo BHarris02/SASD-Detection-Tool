@@ -1,10 +1,10 @@
 """
 Utility mapper functions to map from analysis DTO to business entity.
 """
-from apps.backend.src.data.client.nlp.dtos import (
+from data.client.nlp.dtos import (
     NLPAnalysisDto, CWEMappingDto, SASDAnalysisDto,
 )
-from apps.backend.src.domain.entity.analysis import (
+from domain.entity.analysis import (
     NLPAnalysis, CWEMapping, SASDAnalysis, SASDAnalysisSeverity
 )
 

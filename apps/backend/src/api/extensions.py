@@ -5,7 +5,7 @@ from flask import Flask
 from flask_cors import CORS
 from flask_injector import FlaskInjector
 
-from apps.backend.src.di.container import AppContainer
+from di.container import AppContainer
 
 def register_cors(app: Flask) -> None:
     """

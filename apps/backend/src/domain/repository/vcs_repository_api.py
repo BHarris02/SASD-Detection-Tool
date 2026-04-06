@@ -4,7 +4,7 @@ retrieving artifacts from a remote VCS repository data source.
 """
 from typing import Protocol
 
-from apps.backend.src.domain.entity.vcs import Commit, Issue, FileContent, RepositoryItem
+from domain.entity.vcs import Commit, Issue, FileContent, RepositoryItem
 
 class VCSRepository(Protocol):
     """

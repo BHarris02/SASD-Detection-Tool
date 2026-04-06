@@ -4,8 +4,8 @@ whilst hiding implementation details.
 """
 from typing import Protocol
 
-from apps.backend.src.domain.common.result import Result
-from apps.backend.src.domain.entity.vcs import FileContent, RepositoryItem
+from domain.common.result import Result
+from domain.entity.vcs import FileContent, RepositoryItem
 
 class GetFileContentUseCase(Protocol):
     """

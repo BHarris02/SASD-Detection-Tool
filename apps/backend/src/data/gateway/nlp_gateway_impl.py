@@ -1,13 +1,13 @@
 """
 Concrete implementations of `NLPGateway` contract exposed in `domain` layer.
 """
-from apps.backend.src.data.client.nlp.nlp_api_service import NLPApiService
-from apps.backend.src.data.mapper.analysis_entity_mapper import (
+from data.client.nlp.nlp_api_service import NLPApiService
+from data.mapper.analysis_entity_mapper import (
     nlp_analysis_dto_to_domain
 )
-from apps.backend.src.domain.entity.analysis import NLPAnalysis
-from apps.backend.src.domain.entity.vcs import Commit, FileContent, Issue
-from apps.backend.src.domain.gateway.nlp_gateway_api import NLPGateway
+from domain.entity.analysis import NLPAnalysis
+from domain.entity.vcs import Commit, FileContent, Issue
+from domain.gateway.nlp_gateway_api import NLPGateway
 
 class AnthropicGateway(NLPGateway):
     """

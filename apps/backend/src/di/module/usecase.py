@@ -3,26 +3,26 @@ Wire together `domain` layer dependencies and exposes them via `@provider` decor
 """
 from injector import provider, singleton
 
-from apps.backend.src.domain.gateway.nlp_gateway_api import NLPGateway
-from apps.backend.src.domain.repository.vcs_repository_api import VCSRepository
-from apps.backend.src.domain.usecase.analysis.api import (
+from domain.gateway.nlp_gateway_api import NLPGateway
+from domain.repository.vcs_repository_api import VCSRepository
+from domain.usecase.analysis.api import (
     AnalyzeCommitsUseCase,
     AnalyzeIssuesUseCase,
     AnalyzeCommentsUseCase,
     AnalyzeFileCommentsUseCase,
     AnalyzeRepositoryUseCase
 )
-from apps.backend.src.domain.usecase.analysis.impl import (
+from domain.usecase.analysis.impl import (
     AnalyzeCommitsUseCaseImpl,
     AnalyzeIssuesUseCaseImpl,
     AnalyzeCommentsUseCaseImpl,
     AnalyzeFileCommentsUseCaseImpl,
     AnalyzeRepositoryUseCaseImpl
 )
-from apps.backend.src.domain.usecase.vcs.api import (
+from domain.usecase.vcs.api import (
     GetFileContentUseCase, GetRepositoryStructureUseCase
 )
-from apps.backend.src.domain.usecase.vcs.impl import (
+from domain.usecase.vcs.impl import (
     GetFileContentUseCaseImpl, GetRepositoryStructureUseCaseImpl
 )
 

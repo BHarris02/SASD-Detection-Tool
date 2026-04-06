@@ -3,7 +3,7 @@ Interface to expose the required methods for retrieving artifacts from the remot
 """
 from typing import Protocol
 
-from apps.backend.src.data.remote.vcs.dtos import (
+from data.client.vcs.dtos import (
     CommitDto, IssueDto, FileContentDto, RepositoryItemDto
 )
 

@@ -5,14 +5,14 @@ from os import getenv
 
 from injector import provider, singleton
 
-from apps.backend.src.data.client.nlp.nlp_api_service import NLPApiService
-from apps.backend.src.data.client.nlp.anthropic.claude_api_service import ClaudeApiService
-from apps.backend.src.data.client.vcs.vcs_api_service import VCSApiService
-from apps.backend.src.data.client.vcs.github.github_api_service import GitHubApiService
-from apps.backend.src.data.gateway.nlp_gateway_impl import AnthropicGateway
-from apps.backend.src.data.repository.vcs_repository_impl import GitHubVCSRepository
-from apps.backend.src.domain.gateway.nlp_gateway_api import NLPGateway
-from apps.backend.src.domain.repository.vcs_repository_api import VCSRepository
+from data.client.nlp.nlp_api_service import NLPApiService
+from data.client.nlp.anthropic.claude_api_service import ClaudeApiService
+from data.client.vcs.vcs_api_service import VCSApiService
+from data.client.vcs.github.github_api_service import GitHubApiService
+from data.gateway.nlp_gateway_impl import AnthropicGateway
+from data.repository.vcs_repository_impl import GitHubVCSRepository
+from domain.gateway.nlp_gateway_api import NLPGateway
+from domain.repository.vcs_repository_api import VCSRepository
 
 class DataModule:
     """

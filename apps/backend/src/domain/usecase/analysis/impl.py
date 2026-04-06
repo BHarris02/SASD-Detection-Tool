@@ -1,19 +1,19 @@
 """
 Concrete interactors for NLP analysis.
 """
-from apps.backend.src.domain.common.error import DomainError
-from apps.backend.src.domain.common.result import Result
-from apps.backend.src.domain.entity.analysis import NLPAnalysis
-from apps.backend.src.domain.gateway.nlp_gateway_api import NLPGateway
-from apps.backend.src.domain.repository.vcs_repository_api import VCSRepository
-from apps.backend.src.domain.usecase.analysis.api import (
+from domain.common.error import DomainError
+from domain.common.result import Result
+from domain.entity.analysis import NLPAnalysis
+from domain.gateway.nlp_gateway_api import NLPGateway
+from domain.repository.vcs_repository_api import VCSRepository
+from domain.usecase.analysis.api import (
     AnalyzeCommitsUseCase,
     AnalyzeIssuesUseCase,
     AnalyzeCommentsUseCase,
     AnalyzeFileCommentsUseCase,
     AnalyzeRepositoryUseCase
 )
-from apps.backend.src.domain.usecase.vcs.api import GetRepositoryStructureUseCase
+from domain.usecase.vcs.api import GetRepositoryStructureUseCase
 
 class AnalyzeCommitsUseCaseImpl(AnalyzeCommitsUseCase):
     """

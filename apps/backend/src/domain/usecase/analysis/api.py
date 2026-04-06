@@ -4,8 +4,8 @@ whilst hiding implementation details.
 """
 from typing import Protocol
 
-from apps.backend.src.domain.common.result import Result
-from apps.backend.src.domain.entity.analysis import NLPAnalysis
+from domain.common.result import Result
+from domain.entity.analysis import NLPAnalysis
 
 class AnalyzeCommitsUseCase(Protocol):
     """
