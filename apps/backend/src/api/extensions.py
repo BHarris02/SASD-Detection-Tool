@@ -5,6 +5,8 @@ from flask import Flask
 from flask_cors import CORS
 from flask_injector import FlaskInjector
 
+from apps.backend.src.di.container import AppContainer
+
 def register_cors(app: Flask) -> None:
     """
     Register CORS with Flask app.
@@ -17,5 +19,5 @@ def register_flask_injector(app: Flask) -> None:
     """
     FlaskInjector(
         app=app,
-        modules=[]
+        modules=AppContainer.modules
     )
