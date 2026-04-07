@@ -23,7 +23,7 @@ export const RepoInput = ({ repoUrl, setRepoUrl, fetchRepoStructure}: RepoInputP
     }
 
     return (
-        <form className={styles["repo-input-form"]}>
+        <form onSubmit={handleSubmit} className={styles["repo-input-form"]}>
             <input 
                 type="text"
                 placeholder="Enter Repository URL (owner/repo-name)"
