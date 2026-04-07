@@ -7,7 +7,7 @@ interface RepoInputProps {
     fetchRepoStructure: (repoUrl: string) => void;
 }
 
-export const RepoInput = ({ repoUrl, setRepoUrl, fetchRepoStructure}: RepoInputProps) => {
+export default function RepoInput({ repoUrl, setRepoUrl, fetchRepoStructure}: RepoInputProps) {
     // state
     const [inputValue, setInputValue] = useState<string>(repoUrl || "");
 
