@@ -1,13 +1,27 @@
 import styles from './BackendActions.module.css';
 
-export default function BackendActions() {
+interface BackendActionsProps {
+    onScanCommits: () => void;
+    onScanIssues: () => void;
+    onScanCodeComments: () => void;
+    onScanFileComments: () => void;
+    onScanRepository: () => void;
+}
+
+export default function BackendActions({ 
+    onScanCommits, 
+    onScanIssues, 
+    onScanCodeComments, 
+    onScanFileComments, 
+    onScanRepository
+}: BackendActionsProps) {
     return (
         <div className={styles["backend-actions"]}>
-            <button>Scan Commits</button>
-            <button>Scan Issues</button>
-            <button>Scan Selected Code</button>
-            <button>Scan Current File</button>
-            <button>Scan Entire Repository</button>
+            <button onClick={onScanCommits}>Scan Commits</button>
+            <button onClick={onScanIssues}>Scan Issues</button>
+            <button onClick={onScanCodeComments}>Scan Selected Code</button>
+            <button onClick={onScanFileComments}>Scan Current File</button>
+            <button onClick={onScanRepository}>Scan Entire Repository</button>
         </div>
     );
 }
