@@ -1,16 +1,16 @@
 import styles from './FileViewer.module.css';
 
 interface FileViewerProps {
-    content: string,
-    setSelectedCode: (text: string) => void
+    content: string;
+    onSelectionChange: (selectedText: string) => void;
 }
 
-export default function FileViewer({ content, setSelectedCode }: FileViewerProps) {
+export default function FileViewer({ content, onSelectionChange }: FileViewerProps) {
     // handlers
     const handleTextSelection = () => {
         const selection = window.getSelection();
         const selectedText = selection.toString();
-        setSelectedCode(selectedText);
+        onSelectionChange(selectedText);
     }
 
     return (
