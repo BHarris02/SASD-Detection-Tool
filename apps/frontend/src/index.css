@@ -1,12 +1,16 @@
 :root {
-  --background: #1e293b;
-  --card-background: #334155;
+  --background-primary: #1e293b;
+  --background-secondary: #334155;
+
   --primary-colour: #2563eb;
   --secondary-colour: #10b981;
+
   --danger-colour: #ef4444;
-  --text-colour: #e2e8f0;
-  --text-muted-colour: #94a3b8;
-  --border-colour: #475569;
+
+  --text-primary: #fff;
+  --text-muted: #94a3b8;
+
+  --button-hover: #475569;
 }
 
 * {
@@ -26,8 +30,8 @@ body {
 }
 
 body {
-  color: var(--text-colour);
-  background: var(--background);
+  color: var(--text-primary);
+  background: var(--background-primary);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
