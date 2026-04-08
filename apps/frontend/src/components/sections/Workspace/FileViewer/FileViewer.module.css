@@ -1,7 +1,6 @@
 .fileViewer {
     display: flex;
     flex-direction: column;
-    grid-column: 2;
     align-items: center;
 }
 
