@@ -1,7 +1,8 @@
 import type { FileTreeNode } from "@/types/vcs";
 
 interface FileTreeFileNodeProps {
-    node: FileTreeNode
+    node: FileTreeNode;
+    selectedFilePath: string | null;
     onFileClick: (file: FileTreeNode) => void;
 }
 

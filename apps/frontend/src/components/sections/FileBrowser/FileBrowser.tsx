@@ -7,10 +7,15 @@ import LoadingSpinner from '@/components/ui/LoadingSpinner';
 export default function FileBrowser() {
     // hooks
     const {
+        // RepositoryInput props
         loading,
         repoUrl,
         setRepoUrl,
-        loadRepoStructure
+        loadRepoStructure,
+        // FileTree props
+        fileTree,
+        selectedFilePath,
+        loadFileContent
     } = useFileBrowser();
 
     return (
@@ -24,7 +29,11 @@ export default function FileBrowser() {
                 />
             </div>
             <div>
-                <FileTree />
+                <FileTree
+                    tree={fileTree}
+                    selectedFilePath={selectedFilePath}
+                    onLoadFileContent={loadFileContent}
+                />
             </div>
         </section>
     );

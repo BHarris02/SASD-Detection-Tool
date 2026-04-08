@@ -5,9 +5,11 @@ import { FileTreeFileNode } from './FileTreeFileNode';
 
 interface FileTreeProps {
     tree: FileTreeNode[] | null;
+    selectedFilePath: string | null;
+    onLoadFileContent: (file: FileTreeNode) => void;
 }
 
-export default function FileTree({ tree }: FileTreeProps) {
+export default function FileTree({ tree, selectedFilePath, onLoadFileContent }: FileTreeProps) {
     // utils
     function renderTree(node: FileTreeNode) {
         if (!node) return null;
@@ -21,7 +23,8 @@ export default function FileTree({ tree }: FileTreeProps) {
 
         return <FileTreeFileNode
             node={node}
-            onFileClick={null}  // temp
+            selectedFilePath={selectedFilePath}
+            onFileClick={onLoadFileContent}
         />
     }
 
