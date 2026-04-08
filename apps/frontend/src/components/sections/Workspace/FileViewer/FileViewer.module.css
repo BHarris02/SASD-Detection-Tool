@@ -1,0 +1,12 @@
+.fileViewer {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    align-items: center;
+}
+
+.fileViewer textarea {
+    margin-top: 20px;
+    width: 100%;
+    resize: none;
+}

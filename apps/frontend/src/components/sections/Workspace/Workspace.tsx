@@ -1,4 +1,5 @@
 import AnalysisActions from './AnalysisActions';
+import FileViewer from './FileViewer';
 import styles from './Workspace.module.css';
 
 export default function Workspace() {
@@ -8,7 +9,7 @@ export default function Workspace() {
                 <AnalysisActions />
             </div>
             <div>
-
+                <FileViewer />
             </div>
         </section>
     );
