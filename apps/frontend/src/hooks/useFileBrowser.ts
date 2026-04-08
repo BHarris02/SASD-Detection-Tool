@@ -1,3 +1,4 @@
+import { useAppContext } from "@/context/AppContext";
 import { fetchFileContent, fetchRepoStructure } from "@/services/vcsApi";
 import type { FileTreeNode } from "@/types/vcs";
 import { useState } from "react"
@@ -10,6 +11,8 @@ export default function useFileBrowser() {
     // FileTree
     const [fileTree, setFileTree] = useState<FileTreeNode[] | null>(null);
     const [selectedFilePath, setSelectedFilePath] = useState<string | null>(null);
+    // global
+    const { setFileViewerContent } = useAppContext();
 
     // handlers
     const loadRepoStructure = async () => {
@@ -36,7 +39,7 @@ export default function useFileBrowser() {
         setLoading(true);
         try {
             const resp = await fetchFileContent(repoUrl, selectedFilePath);
-            // What do we do with the content?
+            setFileViewerContent(resp.data.file_content);
         }
         catch (error) {
             console.error(error);
