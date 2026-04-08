@@ -7,9 +7,8 @@ interface FileTreeFileNodeProps {
 
 export function FileTreeFileNode({ node, onFileClick }: FileTreeFileNodeProps) {
     return (
-        <li
-            key={node.name}
-            onClick={() => onFileClick(node)}
-        />
+        <li onClick={() => onFileClick(node)}>
+            { node.name }
+        </li>
     );
 }

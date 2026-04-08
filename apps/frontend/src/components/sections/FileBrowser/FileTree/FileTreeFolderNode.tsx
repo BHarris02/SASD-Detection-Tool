@@ -3,17 +3,15 @@ import type { ReactNode } from "react";
 
 interface FileTreeFolderNodeProps {
     node: FileTreeNode;
-    onRenderTree: (child: FileTreeNode) => ReactNode;
+    renderTree: (child: FileTreeNode) => ReactNode;
 }
 
-export function FileTreeFolderNode({ node, onRenderTree }: FileTreeFolderNodeProps) {
+export function FileTreeFolderNode({ node, renderTree }: FileTreeFolderNodeProps) {
     return (
-        <li key={node.name}>
-            <div>
-                { node.name }
-            </div>
+        <li>
+            <div>{ node.name }</div>
             <ul>
-                { node.children.map((child) => onRenderTree(child))}
+                { node.children.map((child) => renderTree(child))}
             </ul>
         </li>
     );
