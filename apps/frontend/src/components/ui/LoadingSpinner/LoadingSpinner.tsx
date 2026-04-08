@@ -1,7 +1,11 @@
 import { FaSpinner } from "react-icons/fa";
 import styles from "./LoadingSpinner.module.css";
 
-export default function LoadingSpinner({ loading }: { loading: boolean }) {
+interface LoadingSpinnerProps {
+    loading: boolean
+}
+
+export default function LoadingSpinner({ loading }: LoadingSpinnerProps) {
     if (!loading) return null;
 
     return (
