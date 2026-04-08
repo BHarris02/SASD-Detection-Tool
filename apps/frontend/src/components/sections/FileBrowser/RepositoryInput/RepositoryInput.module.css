@@ -20,14 +20,4 @@
 
 .repositoryInputForm button {
     flex: 1;
-    background-color: var(--button-primary);
-    color: var(--text-primary);
-    border: none;
-    border-radius: 8px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.repositoryInputForm button:hover {
-    background-color: var(--button-hover);
 }
