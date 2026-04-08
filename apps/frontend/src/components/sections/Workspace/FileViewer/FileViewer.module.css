@@ -1,10 +1,11 @@
 .fileViewer {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    flex: 1;
 }
 
 .fileViewer textarea {
+    flex: 1;
     margin-top: 20px;
     width: 100%;
     resize: none;
