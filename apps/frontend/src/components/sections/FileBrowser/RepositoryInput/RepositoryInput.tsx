@@ -3,20 +3,14 @@ import styles from './RepositoryInput.module.css';
 interface RepositoryInputProps {
     repoUrl: string;
     setRepoUrl: (url: string) => void;
-    handleFetchRepoStructure: (repoUrl: string) => void;
+    onLoadRepoStructure: () => void;
 }
 
-export default function RepositoryInput({ repoUrl, setRepoUrl, handleFetchRepoStructure }: RepositoryInputProps) {
+export default function RepositoryInput({ repoUrl, setRepoUrl, onLoadRepoStructure }: RepositoryInputProps) {
     // handlers
     const handleSubmit = (event: React.SubmitEvent) => {
         event.preventDefault();
-
-        if (!repoUrl.trim()) {
-            alert("Please enter a repository URL.");
-            return;
-        }
-
-        handleFetchRepoStructure(repoUrl);
+        onLoadRepoStructure();
     }
 
     return (
