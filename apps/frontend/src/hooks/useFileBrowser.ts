@@ -8,8 +8,8 @@ export default function useFileBrowser() {
     const [loading, setLoading] = useState<boolean>(false);
     const [repoUrl, setRepoUrl] = useState<string>("");
     // FileTree
-    const [fileTree, setFileTree] = useState<FileTreeNode[]>(null);
-    const [selectedFilePath, setSelectedFilePath] = useState<string>("");
+    const [fileTree, setFileTree] = useState<FileTreeNode[] | null>(null);
+    const [selectedFilePath, setSelectedFilePath] = useState<string | null>(null);
 
     // handlers
     const loadRepoStructure = async () => {
@@ -32,10 +32,6 @@ export default function useFileBrowser() {
     }
 
     const loadFileContent = async (file: FileTreeNode) => {
-        if (!selectedFilePath.trim()) {
-            alert("Please select a file.");
-            return;
-        }
         setSelectedFilePath(file.path);
         setLoading(true);
         try {
