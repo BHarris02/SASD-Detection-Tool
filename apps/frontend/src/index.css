@@ -1,16 +1,11 @@
 :root {
   --background-primary: #1e293b;
   --background-secondary: #334155;
-
-  --primary-colour: #2563eb;
-  --secondary-colour: #10b981;
-
-  --danger-colour: #ef4444;
-
-  --text-primary: #fff;
-  --text-muted: #94a3b8;
-
+  --border-colour: #fff;
+  --button-primary: #2563eb;
   --button-hover: #475569;
+  --text-primary: #fff;
+  --text-placeholder: #94a3b8;
 }
 
 * {
