@@ -1,4 +1,5 @@
 import styles from './FileBrowser.module.css';
+import FileTree from './FileTree';
 import RepositoryInput from './RepositoryInput';
 
 export default function FileBrowser() {
@@ -8,7 +9,7 @@ export default function FileBrowser() {
                 <RepositoryInput />
             </div>
             <div>
-
+                <FileTree />
             </div>
         </section>
     );
