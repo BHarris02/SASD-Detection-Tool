@@ -3,15 +3,23 @@ import { createContext, useContext, useState } from "react";
 interface AppContextType {
     fileViewerContent: string;
     setFileViewerContent: (content: string) => void;
+    repoUrl: string;
+    setRepoUrl: (url: string) => void;
 }
 
 const AppContext = createContext<AppContextType | null>(null);
 
 export function AppContextProvider({ children }: { children: React.ReactNode }) {
     const [fileViewerContent, setFileViewerContent] = useState<string>("");
+    const [repoUrl, setRepoUrl] = useState<string>("");
 
     return (
-        <AppContext.Provider value={{ fileViewerContent, setFileViewerContent }}>
+        <AppContext.Provider value={{
+            fileViewerContent,
+            setFileViewerContent,
+            repoUrl,
+            setRepoUrl
+        }}>
             { children }
         </AppContext.Provider>
     );

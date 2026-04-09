@@ -7,12 +7,17 @@ export default function useFileBrowser() {
     // state
     // RepositoryInput
     const [loading, setLoading] = useState<boolean>(false);
-    const [repoUrl, setRepoUrl] = useState<string>("");
     // FileTree
     const [fileTree, setFileTree] = useState<FileTreeNode[] | null>(null);
     const [selectedFilePath, setSelectedFilePath] = useState<string | null>(null);
     // global
-    const { setFileViewerContent } = useAppContext();
+    const {
+        // RepositoryInput
+        repoUrl,
+        setRepoUrl,
+        // cross-boundary
+        setFileViewerContent
+    } = useAppContext();
 
     // handlers
     const loadRepoStructure = async () => {
