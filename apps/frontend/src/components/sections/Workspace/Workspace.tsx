@@ -3,6 +3,7 @@ import AnalysisActions from './AnalysisActions';
 import FileViewer from './FileViewer';
 import styles from './Workspace.module.css';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import AnalysisTabs from './AnalysisTabs';
 
 export default function Workspace() {
     // hooks
@@ -16,7 +17,9 @@ export default function Workspace() {
         handleScanIssues,
         handleScanCodeComments,
         handleScanFileComments,
-        handleScanRepository
+        handleScanRepository,
+        // AnalysisTabs
+        analysisResults
     } = useWorkspace();
 
     return (
@@ -32,10 +35,14 @@ export default function Workspace() {
                 />
             </div>
             <div>
-                <FileViewer
-                    fileContent={fileViewerContent}
-                    onSelectionChange={setSelectedCode}
-                />
+                { analysisResults ? (
+                    <AnalysisTabs results={analysisResults} />
+                ) : (
+                    <FileViewer
+                        fileContent={fileViewerContent}
+                        onSelectionChange={setSelectedCode}
+                    />
+                )}
             </div>
         </section>
     );

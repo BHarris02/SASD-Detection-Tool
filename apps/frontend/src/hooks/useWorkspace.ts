@@ -16,6 +16,8 @@ export default function useWorkspace() {
     } = useAppContext();
     // FileViewer
     const [selectedCode, setSelectedCode] = useState<string>("");
+    // AnalysisTabs
+    const [analysisResults, setAnalysisResults] = useState<string | null>(null);
 
     // handlers
     const handleScanCommits = async () => {
@@ -32,6 +34,7 @@ export default function useWorkspace() {
                 \nDetails: ${commit.details}
                 `
             );
+            setAnalysisResults(formattedAnalysis);
         }
         catch (error) {
             console.error(error);
@@ -56,6 +59,7 @@ export default function useWorkspace() {
                 \nDetails: ${issue.details}
                 `
             );
+            setAnalysisResults(formattedAnalysis);
         }
         catch (error) {
             console.error(error);
@@ -75,6 +79,7 @@ export default function useWorkspace() {
         try {
             const resp = await analyzeCodeComments(selectedCode);
             const analysis = resp.data;
+            setAnalysisResults(analysis);
         }
         catch (error) {
             console.error(error);
@@ -95,6 +100,7 @@ export default function useWorkspace() {
         try {
             const resp = await analyzeFileComments(repoUrl, selectedFilePath);
             const analysis = resp.data;
+            setAnalysisResults(analysis);
         }
         catch (error) {
             console.error(error);
@@ -110,6 +116,7 @@ export default function useWorkspace() {
         setLoading(true);
         try {
             const resp = await analyzeRepository(repoUrl);
+            setAnalysisResults(resp.data);
         }
         catch (error) {
             console.error(error);
@@ -139,6 +146,8 @@ export default function useWorkspace() {
         handleScanIssues,
         handleScanCodeComments,
         handleScanFileComments,
-        handleScanRepository
+        handleScanRepository,
+        // AnalysisTabs
+        analysisResults
     }
 }
