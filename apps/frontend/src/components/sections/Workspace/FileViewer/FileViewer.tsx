@@ -8,7 +8,7 @@ interface FileViewerProps {
 export default function FileViewer({ fileContent, onSelectionChange }: FileViewerProps) {
     // handlers
     function handleTextSelection() {
-        const selectedText = window.getSelection().toString()
+        const selectedText = window.getSelection().toString() ?? "";
         onSelectionChange(selectedText);
     }
 
