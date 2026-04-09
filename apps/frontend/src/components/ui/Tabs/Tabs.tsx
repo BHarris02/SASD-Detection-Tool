@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Tab(tabs) {
+export default function Tabs(tabs) {
     // state
     const [activeTab, setActiveTab] = useState<number>(0);
 
