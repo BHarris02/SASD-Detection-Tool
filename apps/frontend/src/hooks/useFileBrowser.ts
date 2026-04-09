@@ -9,12 +9,14 @@ export default function useFileBrowser() {
     const [loading, setLoading] = useState<boolean>(false);
     // FileTree
     const [fileTree, setFileTree] = useState<FileTreeNode[] | null>(null);
-    const [selectedFilePath, setSelectedFilePath] = useState<string | null>(null);
     // global
     const {
         // RepositoryInput
         repoUrl,
         setRepoUrl,
+        // FileTree
+        selectedFilePath,
+        setSelectedFilePath,
         // cross-boundary
         setFileViewerContent
     } = useAppContext();
