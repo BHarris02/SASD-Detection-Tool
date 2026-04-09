@@ -18,13 +18,15 @@ export default function useFileBrowser() {
         selectedFilePath,
         setSelectedFilePath,
         // cross-boundary
-        setFileViewerContent
+        setFileViewerContent,
+        // errors
+        setError
     } = useAppContext();
 
     // handlers
     const loadRepoStructure = async () => {
         if (!repoUrl.trim()) {
-            alert("Please enter a repository URL.");
+            setError("Please enter a repository URL.");
             return;
         }
         setLoading(true);
@@ -34,7 +36,7 @@ export default function useFileBrowser() {
         }
         catch (error) {
             console.error(error);
-            alert("Failed to fetch repository. Please try again later.");
+            setError("Failed to fetch repository. Please try again later.");
         }
         finally {
             setLoading(false);
@@ -50,7 +52,7 @@ export default function useFileBrowser() {
         }
         catch (error) {
             console.error(error);
-            alert("Failed to fetch file content. Please try again later.");
+            setError("Failed to fetch file content. Please try again later.");
         }
         finally {
             setLoading(false);

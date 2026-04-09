@@ -1,6 +1,8 @@
 import { createContext, useContext, useState } from "react";
 
 interface AppContextType {
+    error: string;
+    setError: (message: string) => void;
     fileViewerContent: string;
     setFileViewerContent: (content: string) => void;
     repoUrl: string;
@@ -12,12 +14,15 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | null>(null);
 
 export function AppContextProvider({ children }: { children: React.ReactNode }) {
+    const [error, setError] = useState<string>(null);
     const [fileViewerContent, setFileViewerContent] = useState<string>("");
     const [repoUrl, setRepoUrl] = useState<string>("");
     const [selectedFilePath, setSelectedFilePath] = useState<string | null>(null);
 
     return (
         <AppContext.Provider value={{
+            error,
+            setError,
             fileViewerContent,
             setFileViewerContent,
             repoUrl,

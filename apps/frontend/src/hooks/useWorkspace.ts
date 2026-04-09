@@ -10,7 +10,9 @@ export default function useWorkspace() {
         fileViewerContent,
         // AnalysisActions
         repoUrl,
-        selectedFilePath
+        selectedFilePath,
+        // errors
+        setError
     } = useAppContext();
     // FileViewer
     const [selectedCode, setSelectedCode] = useState<string>("");
@@ -33,7 +35,7 @@ export default function useWorkspace() {
         }
         catch (error) {
             console.error(error);
-            alert("Failed to analyze commit messages. Please try again later.");
+            setError("Failed to analyze commit messages. Please try again later.");
         }
         finally {
             setLoading(false);
@@ -57,7 +59,7 @@ export default function useWorkspace() {
         }
         catch (error) {
             console.error(error);
-            alert("Failed to analyze issues. Please try again later.");
+            setError("Failed to analyze issues. Please try again later.");
         }
         finally {
             setLoading(false);
@@ -66,7 +68,7 @@ export default function useWorkspace() {
 
     const handleScanCodeComments = async () => {
         if (!selectedCode.trim()) {
-            alert("Please select code to analyze.");
+            setError("Please select code to analyze.");
             return;
         }
         setLoading(true);
@@ -76,7 +78,7 @@ export default function useWorkspace() {
         }
         catch (error) {
             console.error(error);
-            alert("Failed to analyze code comments. Please try again later.");
+            setError("Failed to analyze code comments. Please try again later.");
         }
         finally {
             setLoading(false);
@@ -86,7 +88,7 @@ export default function useWorkspace() {
     const handleScanFileComments = async () => {
         if (!validateRepoUrl()) return;
         if (!selectedFilePath || selectedCode.trim() === "") {
-            alert("Please select a file to analyze.");
+            setError("Please select a file to analyze.");
             return;
         }
         setLoading(true);
@@ -96,7 +98,7 @@ export default function useWorkspace() {
         }
         catch (error) {
             console.error(error);
-            alert("Failed to analyze file content. Please try again later.");
+            setError("Failed to analyze file content. Please try again later.");
         }
         finally {
             setLoading(false);
@@ -111,7 +113,7 @@ export default function useWorkspace() {
         }
         catch (error) {
             console.error(error);
-            alert("Failed to analyze repository. Please try again later.");
+            setError("Failed to analyze repository. Please try again later.");
         }
         finally {
             setLoading(false);
@@ -121,7 +123,7 @@ export default function useWorkspace() {
     // utils
     const validateRepoUrl = () => {
         if (!repoUrl.trim()) {
-            alert("Please enter a repository URL.");
+            setError("Please enter a repository URL.");
             return false;
         }
         return true;
