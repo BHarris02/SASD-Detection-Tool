@@ -1,13 +1,27 @@
 import styles from './AnalysisActions.module.css';
 
-export default function AnalysisActions() {
+interface AnalysisActionsProps {
+    onScanCommits: () => void;
+    onScanIssues: () => void;
+    onScanCodeComments: () => void;
+    onScanFileComments: () => void;
+    onScanRepository: () => void
+}
+
+export default function AnalysisActions({ 
+    onScanCommits,
+    onScanIssues,
+    onScanCodeComments,
+    onScanFileComments,
+    onScanRepository 
+}: AnalysisActionsProps) {
     return (
         <div className={styles.analysisActionsButtons}>
-            <button>Scan Commits</button>
-            <button>Scan Issues</button>
-            <button>Scan Selected Code</button>
-            <button>Scan Current File</button>
-            <button>Scan Repository</button>
+            <button onClick={onScanCommits}>Scan Commits</button>
+            <button onClick={onScanIssues}>Scan Issues</button>
+            <button onClick={onScanCodeComments}>Scan Selected Code</button>
+            <button onClick={onScanFileComments}>Scan Current File</button>
+            <button onClick={onScanRepository}>Scan Repository</button>
         </div>
     );
 }
