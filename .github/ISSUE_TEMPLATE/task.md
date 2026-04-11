@@ -1,6 +1,6 @@
 ---
 name: Task
-description: Standard implementation ticket
+about: Standard implementation ticket
 labels: []
 ---
 
