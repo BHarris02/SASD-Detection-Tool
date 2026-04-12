@@ -1,0 +1,9 @@
+.fileBrowser {
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
