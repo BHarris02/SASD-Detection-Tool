@@ -1,0 +1,6 @@
+.fileTree {
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    padding: 20px;
+    overflow-y: auto;
+}
