@@ -1,8 +1,0 @@
-.analysisActionsButtons {
-    display: flex;
-    gap: 10px;
-}
-
-.analysisActionsButtons button {
-    flex: 1;
-}
