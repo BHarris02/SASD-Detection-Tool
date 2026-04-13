@@ -10,7 +10,7 @@ from api.blueprint.health import health_bp
 from api.blueprint.vcs import vcs_bp
 from api.config import CONFIG_MAP
 from api.extensions import (
-    register_cors, register_flask_injector
+    register_api_spec, register_cors, register_flask_injector
 )
 
 def create_app() -> Flask:
@@ -25,9 +25,8 @@ def create_app() -> Flask:
     app.config.from_object(CONFIG_MAP[env])
 
     register_cors(app)
-
     _register_blueprints(app)
-
+    register_api_spec(app)
     register_flask_injector(app)
 
     return app
