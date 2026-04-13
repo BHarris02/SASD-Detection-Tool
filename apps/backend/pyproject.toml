@@ -12,6 +12,7 @@ dependencies = [
     "flask",
     "flask-cors",
     "flask-injector",
+    "flask-pydantic-spec",
     "injector",
     "pydantic",
     "python-dotenv",
