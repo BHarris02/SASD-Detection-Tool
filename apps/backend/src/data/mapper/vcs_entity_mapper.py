@@ -51,5 +51,8 @@ def repository_item_dto_to_domain(dto: RepositoryItemDto) -> RepositoryItem:
         name=dto.name,
         path=dto.path,
         type=RepositoryItemType(dto.type),
-        children=dto.children
+        children=[
+            repository_item_dto_to_domain(child)
+            for child in dto.children
+        ] if dto.children else []
     )
