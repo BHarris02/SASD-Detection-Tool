@@ -4,7 +4,8 @@ Concrete implementations of VCSRepository contract exposed in `domain` layer.
 from data.mapper.vcs_entity_mapper import (
     commit_dto_to_domain,
     issue_dto_to_domain,
-    file_content_dto_to_domain
+    file_content_dto_to_domain,
+    repository_item_dto_to_domain
 )
 from data.client.vcs.vcs_api_service import VCSApiService
 from domain.entity.vcs import Commit, FileContent, Issue, RepositoryItem
@@ -42,4 +43,9 @@ class GitHubVCSRepository(VCSRepository):
             raise e
 
     def get_repository_structure(self, repo_url: str) -> list[RepositoryItem]:
-        ...
+        try:
+            repository_item_dtos = self._api_service.fetch_repository_structure(repo_url)
+            respository_items = [ repository_item_dto_to_domain(dto) for dto in repository_item_dtos ]
+            return respository_items
+        except Exception as e:
+            raise e
