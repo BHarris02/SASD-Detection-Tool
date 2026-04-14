@@ -6,6 +6,7 @@ from os import getenv
 from dotenv import load_dotenv
 from flask import Flask
 
+from api.blueprint.analysis import analysis_bp
 from api.blueprint.health import health_bp
 from api.blueprint.vcs import vcs_bp
 from api.config import CONFIG_MAP
@@ -32,5 +33,6 @@ def create_app() -> Flask:
     return app
 
 def _register_blueprints(app: Flask) -> None:
+    app.register_blueprint(analysis_bp)
     app.register_blueprint(health_bp)
     app.register_blueprint(vcs_bp)
