@@ -15,8 +15,8 @@ class GeminiApiService(NLPApiService):
     """
     Service that fetches analysis of artifacts from Google API using a Gemini model.
     """
-    def __init__(self, model: str):
-        self._client = Client()
+    def __init__(self, api_token: str, model: str):
+        self._client = Client(api_key=api_token)
         self._model = model
 
     def analyze_commit(self, commit: str):

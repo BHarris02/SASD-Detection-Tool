@@ -23,7 +23,7 @@ class DataModule(Module):
     @provider
     @singleton
     def provide_nlp_api_service(self) -> NLPApiService:
-        provider = getenv("NLP_PROVIDER", "gemini")
+        provider = getenv("NLP_PROVIDER", "google")
 
         if provider == "anthropic":
             api_token = getenv("ANTHROPIC_API_TOKEN")
