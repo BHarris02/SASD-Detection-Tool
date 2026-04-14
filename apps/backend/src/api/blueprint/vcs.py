@@ -1,7 +1,7 @@
 """
 REST endpoints for VCS functionality.
 """
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, request
 from flask_pydantic_spec import Response
 
 from api.extensions import api_spec
