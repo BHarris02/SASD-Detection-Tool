@@ -2,10 +2,10 @@
 Utility mapper functions to map from `data` DTO to `domain` business entity.
 """
 from data.client.vcs.dtos import (
-    CommitDto, IssueDto, IssueLabelDto, FileContentDto
+    CommitDto, IssueDto, IssueLabelDto, FileContentDto, RepositoryItemDto
 )
 from domain.entity.vcs import (
-    Commit, Issue, IssueLabel, FileContent
+    Commit, Issue, IssueLabel, FileContent, RepositoryItem, RepositoryItemType
 )
 
 def commit_dto_to_domain(dto: CommitDto) -> Commit:
@@ -41,4 +41,18 @@ def file_content_dto_to_domain(dto: FileContentDto) -> FileContent:
     """
     return FileContent(
         dto.content
+    )
+
+def repository_item_dto_to_domain(dto: RepositoryItemDto) -> RepositoryItem:
+    """
+    Map `RepositoryItemDto` to `RepositoryItem`.
+    """
+    return RepositoryItem(
+        name=dto.name,
+        path=dto.path,
+        type=RepositoryItemType(dto.type),
+        children=[
+            repository_item_dto_to_domain(child)
+            for child in dto.children
+        ] if dto.children else []
     )

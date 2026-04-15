@@ -1,24 +1,18 @@
 """
 Concrete implementation of `NLPApiService` using Anthropic API.
 """
-from enum import StrEnum
 from json import loads
 
 from anthropic import Anthropic
 from anthropic.types import TextBlock
 
+from data.client.nlp.nlp_artifact_type import NLPArtifactType
 from data.client.nlp.dtos import (
     NLPAnalysisDto
 )
-from data.client.nlp.anthropic.adapter import to_dto
-from data.client.nlp.anthropic.models import AnthropicNLPAnalysisResponse
+from data.client.nlp.adapter import to_dto
+from data.client.nlp.models import NLPAnalysisResponse
 from data.client.nlp.nlp_api_service import NLPApiService
-
-class _ArtifactType(StrEnum):
-    COMMIT = "commit message"
-    ISSUE = "issue"
-    COMMENT = "code comment"
-
 
 class ClaudeApiService(NLPApiService):
     """
@@ -53,13 +47,13 @@ class ClaudeApiService(NLPApiService):
         self._model = model
 
     def analyze_commit(self, commit: str) -> NLPAnalysisDto:
-        return self._analyze_artifact(artifact=commit, artifact_type=_ArtifactType.COMMIT)
+        return self._analyze_artifact(artifact=commit, artifact_type=NLPArtifactType.COMMIT)
 
     def analyze_issue(self, issue: str) -> NLPAnalysisDto:
-        return self._analyze_artifact(artifact=issue, artifact_type=_ArtifactType.ISSUE)
+        return self._analyze_artifact(artifact=issue, artifact_type=NLPArtifactType.ISSUE)
 
     def analyze_comment(self, comment: str) -> NLPAnalysisDto:
-        return self._analyze_artifact(artifact=comment, artifact_type=_ArtifactType.COMMENT)
+        return self._analyze_artifact(artifact=comment, artifact_type=NLPArtifactType.COMMENT)
 
     def _analyze_artifact(self, artifact: str, artifact_type: str) -> NLPAnalysisDto:
         resp = self._client.messages.create(
@@ -81,5 +75,5 @@ class ClaudeApiService(NLPApiService):
             if isinstance(block, TextBlock)
         )
         raw = loads(text_block.text)
-        validated = AnthropicNLPAnalysisResponse.model_validate(raw)
+        validated = NLPAnalysisResponse.model_validate(raw)
         return to_dto(validated)

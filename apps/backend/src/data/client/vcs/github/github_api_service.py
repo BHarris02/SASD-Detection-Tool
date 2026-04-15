@@ -74,4 +74,40 @@ class GitHubApiService(VCSApiService):
         return FileContentDto(content=decoded)
 
     def fetch_repository_structure(self, repo_url: str) -> list[RepositoryItemDto]:
-        ...
+        resp = get(
+            url=f"{self._base_url}/repos/{repo_url}/contents",
+            headers=self._headers,
+            timeout=self._timeout
+        )
+        resp.raise_for_status()
+        structure = resp.json()
+        parsed_structure = self._parse_structure(structure)
+        return parsed_structure
+
+    def _parse_structure(self, raw_structure: dict[str, str]) -> list[RepositoryItemDto]:
+        structure = []
+        for item in raw_structure:
+            if item["type"]== "dir":
+                resp = get(
+                    url=item["url"],
+                    headers=self._headers,
+                    timeout=self._timeout
+                )
+                resp.raise_for_status()
+                dir_structure = resp.json()
+                structure.append(RepositoryItemDto(
+                    name=item["name"],
+                    path=item["url"],
+                    type=item["type"],
+                    children=self._parse_structure(dir_structure)
+                ))
+            elif item["type"] == "file":
+                structure.append(RepositoryItemDto(
+                    name=item["name"],
+                    path=item["url"],
+                    type=item["type"],
+                    children=None
+                ))
+            else:
+                continue
+        return structure

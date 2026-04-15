@@ -50,7 +50,7 @@ class RepositoryItemType(Enum):
     Either a file or folder.
     """
     FILE = "file"
-    FOLDER = "folder"
+    FOLDER = "dir"
 
 @dataclass
 class RepositoryItem:

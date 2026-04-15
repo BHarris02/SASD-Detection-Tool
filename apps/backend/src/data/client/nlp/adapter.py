@@ -1,14 +1,14 @@
 """
-Utility adapter function to map raw API responses to DTO.
+Shared adapter to map NLP API response models to DTOs.
 """
 from data.client.nlp.dtos import (
     NLPAnalysisDto, SASDAnalysisDto, CWEMappingDto
 )
-from data.client.nlp.anthropic.models import AnthropicNLPAnalysisResponse
+from data.client.nlp.models import NLPAnalysisResponse
 
-def to_dto(resp: AnthropicNLPAnalysisResponse) -> NLPAnalysisDto:
+def to_dto(resp: NLPAnalysisResponse) -> NLPAnalysisDto:
     """
-    Map `AnthropicNLPAnalysisResponse` into `NLPAnalysisDto`.
+    Map `NLPAnalysisResponse` into `NLPAnalysisDto`.
     """
     sasd_dto = (
         SASDAnalysisDto(

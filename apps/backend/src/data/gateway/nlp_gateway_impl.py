@@ -9,9 +9,9 @@ from domain.entity.analysis import NLPAnalysis
 from domain.entity.vcs import Commit, FileContent, Issue
 from domain.gateway.nlp_gateway_api import NLPGateway
 
-class AnthropicGateway(NLPGateway):
+class NLPGatewayImpl(NLPGateway):
     """
-    A concrete `NLPGateway` implemented using an Anthropic LLM.
+    A concrete `NLPGateway` implemented using an `NLPApiService`.
     """
     def __init__(self, api_service: NLPApiService) -> None:
         self._api_service = api_service
