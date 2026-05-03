@@ -40,13 +40,3 @@ class AnalyseRepositoryUseCase(ABC):
     """
     @abstractmethod
     def __call__(self, repository_owner: str, repository_name: str) -> Any:...
-
-# export all interfaces
-
-__all__ = [
-    "AnalyseCommitsUseCase",
-    "AnalyseIssuesUseCase",
-    "AnalyseCodeCommentsUseCase",
-    "AnalysePullRequestsUseCase",
-    "AnalyseRepositoryUseCase"
-]
