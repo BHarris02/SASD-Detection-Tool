@@ -2,6 +2,7 @@
 Flask app factory
 """
 from flask import Flask, Blueprint
+
 from src.bootstrap.extensions import register_cors
 from src.presentation.blueprint.analysis import analysis_bp
 
