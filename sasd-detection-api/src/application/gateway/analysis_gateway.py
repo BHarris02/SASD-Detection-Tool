@@ -2,7 +2,7 @@
 Analysis gateway interface
 """
 from abc import ABC, abstractmethod
-from typing import List
+from typing import Sequence
 
 from src.domain.value_object.analysis import AnalysisBatch
 from src.domain.entity.common import Artefact
@@ -12,7 +12,7 @@ class AnalysisGateway(ABC):
     Analysis gateway
     """
     @abstractmethod
-    def analyse_artefacts(self, artefacts: List[Artefact]) -> AnalysisBatch:
+    def analyse_artefacts(self, artefacts: Sequence[Artefact]) -> AnalysisBatch:
         """
         Analyse artefacts for self-admitted security debt.
         Return partial success results

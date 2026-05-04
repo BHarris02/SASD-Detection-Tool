@@ -1,8 +1,10 @@
 """
 Use case implementations
 """
-from typing import Any
-
+from src.application.error.analysis import (
+    NoArtefactsToAnalyseException,
+    NoCommentsToAnalyseException
+)
 from src.application.gateway.analysis_gateway import AnalysisGateway
 from src.application.gateway.vcs_gateway import VcsGateway
 from src.application.usecase.analysis import (
@@ -12,6 +14,10 @@ from src.application.usecase.analysis import (
     AnalysePullRequestsUseCase,
     AnalyseRepositoryUseCase
 )
+from src.domain.entity.vcs import CodeArtefact
+from src.domain.service.comment_detection import contains_comments
+from src.domain.value_object.analysis import AnalysisBatch
+
 
 class AnalyseCommitsUseCaseImpl(AnalyseCommitsUseCase):
     """
@@ -21,10 +27,11 @@ class AnalyseCommitsUseCaseImpl(AnalyseCommitsUseCase):
         self._analysis_gateway = analysis_gateway
         self._vcs_gateway = vcs_gateway
 
-    def __call__(self, repository_owner: str, repository_name: str) -> Any:
+    def __call__(self, repository_owner: str, repository_name: str) -> AnalysisBatch:
         commits = self._vcs_gateway.fetch_commits(repository_owner, repository_name)
-        commits_analysis = self._analysis_gateway.analyse_artefacts(commits)
-        return commits_analysis
+        if not commits:
+            raise NoArtefactsToAnalyseException()
+        return self._analysis_gateway.analyse_artefacts(commits)
 
 class AnalyseIssuesUseCaseImpl(AnalyseIssuesUseCase):
     """
@@ -34,22 +41,25 @@ class AnalyseIssuesUseCaseImpl(AnalyseIssuesUseCase):
         self._analysis_gateway = analysis_gateway
         self._vcs_gateway = vcs_gateway
 
-    def __call__(self, repository_owner: str, repository_name: str) -> Any:
+    def __call__(self, repository_owner: str, repository_name: str) -> AnalysisBatch:
         issues = self._vcs_gateway.fetch_issues(repository_owner, repository_name)
-        issues_analysis = self._analysis_gateway.analyse_artefacts(issues)
-        return issues_analysis
+        if not issues:
+            raise NoArtefactsToAnalyseException()
+        return self._analysis_gateway.analyse_artefacts(issues)
 
 class AnalyseCodeCommentsUseCaseImpl(AnalyseCodeCommentsUseCase):
     """
     Implementation of AnalyseCodeCommentsUseCase contract
     """
-    def __init__(self, analysis_gateway: AnalysisGateway, vcs_gateway: VcsGateway) -> None:
+    def __init__(self, analysis_gateway: AnalysisGateway) -> None:
         self._analysis_gateway = analysis_gateway
-        self._vcs_gateway = vcs_gateway
 
-    def __call__(self, source_code: str) -> Any:
-        code_comments_analysis = self._analysis_gateway.analyse_artefacts(source_code)
-        return code_comments_analysis
+    def __call__(self, source_code: str) -> AnalysisBatch:
+        if not contains_comments(source_code):
+            raise NoCommentsToAnalyseException()
+        return self._analysis_gateway.analyse_artefacts(
+            [CodeArtefact(source_code=source_code)]
+        )
 
 class AnalysePullRequestsUseCaseImpl(AnalysePullRequestsUseCase):
     """
@@ -59,10 +69,11 @@ class AnalysePullRequestsUseCaseImpl(AnalysePullRequestsUseCase):
         self._analysis_gateway = analysis_gateway
         self._vcs_gateway = vcs_gateway
 
-    def __call__(self, repository_owner: str, repository_name: str) -> Any:
+    def __call__(self, repository_owner: str, repository_name: str) -> AnalysisBatch:
         pull_requests = self._vcs_gateway.fetch_pull_requests(repository_owner, repository_name)
-        pull_request_analysis = self._analysis_gateway.analyse_artefacts(pull_requests)
-        return pull_request_analysis
+        if not pull_requests:
+            raise NoArtefactsToAnalyseException()
+        return self._analysis_gateway.analyse_artefacts(pull_requests)
 
 class AnalyseRepositoryUseCaseImpl(AnalyseRepositoryUseCase):
     """
