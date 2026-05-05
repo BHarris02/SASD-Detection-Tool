@@ -3,7 +3,7 @@ Flask app factory
 """
 from flask import Flask, Blueprint
 
-from src.bootstrap.extensions import register_cors
+from src.bootstrap.extensions import register_cors, register_flask_injector
 from src.presentation.blueprint.analysis import analysis_bp
 
 def create_app() -> Flask:
@@ -13,6 +13,7 @@ def create_app() -> Flask:
     app = Flask(__name__)
     # register extensions
     register_cors(app)
+    register_flask_injector(app)
     # app blueprint
     app_bp = Blueprint(
         name="app_bp",

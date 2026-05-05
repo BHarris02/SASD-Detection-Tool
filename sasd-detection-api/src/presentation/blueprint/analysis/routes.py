@@ -3,6 +3,14 @@ REST endpoints for analysis actions
 """
 from flask import  jsonify
 from flask_pydantic_spec import Request, Response
+from injector import inject
+
+from src.application.usecase.analysis import (
+    AnalyseCommitsUseCase,
+    AnalyseIssuesUseCase,
+    AnalyseCodeCommentsUseCase,
+    AnalysePullRequestsUseCase
+)
 
 from src.presentation.blueprint.analysis import analysis_bp, _analysis_spec
 from src.presentation.dto.request import AnalysisRequest, AnalyseCodeCommentsRequest
@@ -13,7 +21,8 @@ from src.presentation.dto.response import AnalysisResponse
     body=Request(AnalysisRequest),
     resp=Response(HTTP_200=AnalysisResponse)
 )
-def analyse_commits():
+@inject
+def analyse_commits(analyse_commits_use_case: AnalyseCommitsUseCase):
     """
     Analyse commits endpoint
     """
@@ -26,7 +35,8 @@ def analyse_commits():
     body=Request(AnalysisRequest),
     resp=Response(HTTP_200=AnalysisResponse)
 )
-def analyse_issues():
+@inject
+def analyse_issues(analyse_issues_use_case: AnalyseIssuesUseCase):
     """
     Analyse issues endpoint
     """
@@ -39,7 +49,8 @@ def analyse_issues():
     body=Request(AnalyseCodeCommentsRequest),
     resp=Response(HTTP_200=AnalysisResponse)
 )
-def analyse_code_comments():
+@inject
+def analyse_code_comments(analyse_code_comments_use_case: AnalyseCodeCommentsUseCase):
     """
     Analyse code comments endpoint
     """
@@ -52,7 +63,8 @@ def analyse_code_comments():
     body=Request(AnalysisRequest),
     resp=Response(HTTP_200=AnalysisResponse)
 )
-def analyse_pull_requests():
+@inject
+def analyse_pull_requests(analyse_pull_requests_use_case: AnalysePullRequestsUseCase):
     """
     Analyse pull requests endpoint
     """
