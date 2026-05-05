@@ -2,7 +2,6 @@
 Concrete implementation of `VcsGateway` using GitHub
 """
 from src.application.gateway.vcs_gateway import VcsGateway
-from src.domain.error.vcs import NoArtefactsException
 from src.infrastructure.client.vcs.github.client import GitHubClient
 from src.infrastructure.mapper.vcs.github import (
     commit_dto_to_domain,
