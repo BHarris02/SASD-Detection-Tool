@@ -35,6 +35,8 @@ class GitHubClient:
         Fetch issues via API call
         """
         resp = self._fetch(f"/repos/{repository_owner}/{repository_name}/issues")
+        # GitHub's /issues endpoint returns issues AND pull requests
+        # Issues with `pull_request` key are disguised PRs
         return [
             IssueDto.model_validate(issue)
             for issue in resp
@@ -62,7 +64,6 @@ class GitHubClient:
         resp.raise_for_status()
         return resp.json()
 
-    # GitHub's /issues endpoint returns issues AND pull requests
-    # Issues with `pull_request` key are disguised PRs
-    def _is_issue(self, raw: dict) -> bool:
+    @staticmethod
+    def _is_issue(raw: dict) -> bool:
         return "pull_request" not in raw
