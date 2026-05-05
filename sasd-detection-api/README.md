@@ -11,7 +11,7 @@ It collects repository artefacts (commits, issues, and pull requests) from the G
 API, or allows developers to provide code snippets, and passes it through an AI pipeline
 to detect instances of Self-Admitted Security Debt (SASD).
 
-Built with Flask using a _Clean Architecture_ and _Domain-drive Design_ approach,
+Built with Flask using a _Clean Architecture_ and _Domain-driven Design_ approach,
 separating presentation, application, domain, and infrastructure concerns.
 
 ## :classical_building: Architecture
