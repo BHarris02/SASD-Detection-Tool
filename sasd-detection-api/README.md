@@ -2,10 +2,6 @@
 
 ## :clipboard: Overview
 
-`sasd-detection-api` is a **prototype** RESTful backend for the SASD Detection Tool.
-
-## :clipboard: Overview
-
 `sasd-detection-api` is a **prototype** RESTful backend for the SASD Detection Tool. 
 It collects repository artefacts (commits, issues, and pull requests) from the GitHub
 API, or allows developers to provide code snippets, and passes it through an AI pipeline
