@@ -13,11 +13,10 @@ class CommitArtefact(Artefact):
     """
     Commit artefact
     """
-    title: str
-    body: str
+    message: str
 
     def __post_init__(self):
-        if (not self.title) and (not self.body):
+        if not str:
             raise MalformedArtefactException()
 
 @dataclass
