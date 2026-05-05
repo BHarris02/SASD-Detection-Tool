@@ -22,10 +22,7 @@ def commit_dto_to_domain(dto: CommitDto) -> Optional[CommitArtefact]:
     Map `CommitDto` to `CommitArtefact`
     """
     try:
-        return CommitArtefact(
-            dto.commit.title,
-            body=dto.commit.body
-        )
+        return CommitArtefact(message=dto.commit.message)
     except MalformedArtefactException:
         return None
 
@@ -68,7 +65,7 @@ def pull_request_dto_to_domain(dto: PullRequestDto) -> Optional[PullRequestArtef
         return None
 
 def _map_artefact_label_dtos(labels: List[ArtefactLabelDto]) -> List[ArtefactLabel]:
-    return [
-        label_dto_to_domain(dto)
-        for dto in labels
-    ] if labels else []
+    if not labels:
+        return []
+    mapped = [label_dto_to_domain(dto) for dto in labels]
+    return [label for label in mapped if label is not None]
