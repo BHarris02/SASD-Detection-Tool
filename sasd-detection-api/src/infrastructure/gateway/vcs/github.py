@@ -22,28 +22,18 @@ class GitHubGateway(VcsGateway):
         Fetch commits via GitHub API call
         """
         commit_dtos = self._client.fetch_commits(repository_owner, repository_name)
-        commits = [commit_dto_to_domain(dto) for dto in commit_dtos]
-        if not commits:
-            raise NoArtefactsException()
-        return commits
-
+        return [commit_dto_to_domain(dto) for dto in commit_dtos]
 
     def fetch_issues(self, repository_owner, repository_name):
         """
         Fetch issues via GitHub API call
         """
         issue_dtos = self._client.fetch_issues(repository_owner, repository_name)
-        issues = [issue_dto_to_domain for dto in issue_dtos]
-        if not issues:
-            raise NoArtefactsException()
-        return issues
+        return [issue_dto_to_domain for dto in issue_dtos]
 
     def fetch_pull_requests(self, repository_owner, repository_name):
         """
         Fetch PRs via GitHub API call
         """
         pr_dtos = self._client.fetch_pull_requests(repository_owner, repository_name)
-        prs = [pull_request_dto_to_domain(dto) for dto in pr_dtos]
-        if not prs:
-            raise NoArtefactsException()
-        return prs
+        return [pull_request_dto_to_domain(dto) for dto in pr_dtos]
