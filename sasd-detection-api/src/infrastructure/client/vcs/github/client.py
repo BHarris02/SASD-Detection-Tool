@@ -11,7 +11,7 @@ GITHUB_API_VERSION = "2022-11-28"
 
 class GitHubClient:
     """
-    HTTP client that fetches repositort artefacts via GitHub API
+    HTTP client that fetches repository artefacts via GitHub API
     """
     def __init__(self, api_token: str, base_url: str, timeout: int, user_agent: str):
         self._base_url = base_url
