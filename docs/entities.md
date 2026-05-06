@@ -4,40 +4,50 @@
 
 ```mermaid
 classDiagram
-    class Artefact {
-        <<abstract>>
+    namespace domain.entity.common {
+        class Artefact {
+            <<abstract>>
+        }
     }
-    class CommitArtefact {
-        title: String
-        body: String
+
+    namespace domain.entity.vcs {
+        class CommitArtefact {
+            - message: String
+        }
+
+        class IssueArtefact {
+            - title: String
+            - body: String
+            - labels: ArtefactLabel[]
+        }
+
+        class CodeArtefact {
+            - source_code: String
+        }
+
+        class PullRequestArtefact {
+            - title: String
+            - body: String
+            - labels: ArtefactLabel[]
+        }
     }
-    class IssueArtefact {
-        title: String
-        description: String
-        labels: ArtefactLabel[]
+
+    namespace domain.valueobject.vcs {
+        class ArtefactLabel {
+            <<value>>
+            - name: String
+            - description: String
+        }
     }
-    class ArtefactLabel {
-        name: String
-        description: String
-    }
-    class CodeArtefact {
-        content: String
-    }
-    class PullRequestArtefact {
-        title: String
-        description: String
-        labels: ArtefactLabel[]
-    }
-    
+
 CommitArtefact --|> Artefact
-
 IssueArtefact --|> Artefact
-IssueArtefact *-- ArtefactLabel
-
 CodeArtefact --|> Artefact
-
 PullRequestArtefact --|> Artefact
+
+IssueArtefact *-- ArtefactLabel
 PullRequestArtefact *-- ArtefactLabel
+
 ```
 
 ## NLP Entities Class Diagram
