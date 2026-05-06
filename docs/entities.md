@@ -22,7 +22,7 @@ classDiagram
         }
 
         class CodeArtefact {
-            - source_code: String
+            - sourceCode: String
         }
 
         class PullRequestArtefact {
