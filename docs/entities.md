@@ -12,31 +12,30 @@ classDiagram
 
     namespace domain.entity.vcs {
         class CommitArtefact {
-            - message: String
+            message: String
         }
 
         class IssueArtefact {
-            - title: String
-            - body: String
-            - labels: ArtefactLabel[]
+            title: String
+            body: String
+            labels: ArtefactLabel[]
         }
 
         class CodeArtefact {
-            - sourceCode: String
+            sourceCode: String
         }
 
         class PullRequestArtefact {
-            - title: String
-            - body: String
-            - labels: ArtefactLabel[]
+            title: String
+            body: String
+            labels: ArtefactLabel[]
         }
     }
 
-    namespace domain.valueobject.vcs {
+    namespace domain.value-object.vcs {
         class ArtefactLabel {
-            <<value>>
-            - name: String
-            - description: String
+            name: String
+            description: String
         }
     }
 
