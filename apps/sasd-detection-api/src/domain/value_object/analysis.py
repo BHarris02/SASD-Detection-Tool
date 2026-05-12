@@ -3,10 +3,7 @@ Value objects for analysis entities
 """
 from dataclasses import dataclass
 from enum import Enum
-from typing import List
 
-from src.domain.entity.analysis import AnalysisResult
-from src.domain.entity.common import Artefact
 from src.domain.error.analysis import (
     SasdAnalysisExplanationMissingException,
     CweMappingIDMissingException,
@@ -51,28 +48,3 @@ class CweMapping:
             raise CweMappingTitleMissingException()
         if not self.description:
             raise CweMappingDescriptionMissingException()
-
-class AnalysisFailureReason(Enum):
-    """
-    Domain-level reasons an artefact could not be analysed
-    """
-    MALFORMED_ARTEFACT = "malformed_artefact"
-    ANALYSIS_FAILED = "analysis_failed"
-
-@dataclass(frozen=True)
-class AnalysisFailure:
-    """
-    Record of failure to analyse an artefact.
-    Implementation-specific failure details translated at gateway boundary
-    """
-    artefact: Artefact
-    reason: AnalysisFailureReason
-
-@dataclass(frozen=True)
-class AnalysisBatch:
-    """
-    Outcome of analysing a group of artefacts.
-    Contains partial success results.
-    """
-    results: List[AnalysisResult]
-    failures: List[AnalysisFailure]
