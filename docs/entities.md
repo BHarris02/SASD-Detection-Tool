@@ -54,35 +54,77 @@ PullRequestArtefact *-- ArtefactLabel
 
 ```mermaid
 classDiagram
-    class SasdAnalysisSeverity {
-        <<enum>>
-        LOW,
-        MEDIUM,
-        HIGH,
-        CRITICAL
-    }
-    class SasdAnalysis {
-        explanation: String
-        severity: SasdAnalysisSeverity
-    }
-    class CweMapping {
-        id: String
-        title: String
-        explanation: String
-    }
-    class Artefact {
-        <<abstract>>
-    }
-    class NlpAnalysis {
-        artefact: Artefact
-        isSasd: boolean
-        sasdAnalysis: SasdAnalysis
-        cweMapping: CweMapping[]
+
+    namespace domain.aggregate.analysis {
+        class AnalysisBatch {
+            results: AnalysisResult[]
+            failures: AnalysisFailure[]
+        }
     }
 
-NlpAnalysis o-- SasdAnalysis
-NlpAnalysis o-- CweMapping
-NlpAnalysis o-- Artefact
+    namespace domain.entity.analysis {
 
-SasdAnalysis *-- SasdAnalysisSeverity
+        class AnalysisFailureReason {
+            <<enum>>
+            MALFORMED_ARTEFACT
+            ANALYSIS_FAILED
+        }
+
+        class AnalysisFailure {
+            artefact: artefact
+            reason: AnalysisFailureReason
+        }
+
+        class AnalysisResult {
+            artefact: Artefact
+            isSasd: Boolean
+            sasdAnalysis: SasdAnalysis?
+            cweMapping: CweMapping?
+        }
+    }
+
+    namespace domain.entity.common {
+        class Artefact {
+            <<abstract>>
+        }
+    }
+
+    namespace domain.value-object.analysis {
+
+        class SasdAnalysisSeverity {
+            <<enum>>
+            LOW
+            MEDIUM
+            HIGH
+            CRITICAL
+        }
+
+        class SasdAnalysis {
+            explanation: String
+            severity: SasdAnalysisSeverity
+        }
+
+        class CweId {
+            value: String
+        }
+
+        class CweMapping {
+            cweId: cweId
+            title: String
+            description: String
+        }
+    }
+
+SasdAnalysis --> SasdAnalysisSeverity
+CweMapping --> CweId
+
+AnalysisFailure o-- Artefact
+AnalysisFailure --> AnalysisFailureReason
+
+AnalysisResult o-- Artefact
+AnalysisResult o-- SasdAnalysis
+AnalysisResult o-- CweMapping
+
+AnalysisBatch *-- AnalysisResult
+AnalysisBatch *-- AnalysisFailure
 ```
