@@ -13,13 +13,9 @@ def configure_logging(level: str = "INFO"):
         {
             "version": 1,
             "formatters": {
-                "default": {
-                    "format": "[%(asctime)s] %(levelname)s %(name)s: %(message)s"
-                }
+                "default": {"format": "[%(asctime)s] %(levelname)s %(name)s: %(message)s"}
             },
-            "handlers": {
-                "console": {"class": "logging.StreamHandler", "formatter": "default"}
-            },
+            "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "default"}},
             "root": {"level": level, "handlers": ["console"]},
         }
     )
