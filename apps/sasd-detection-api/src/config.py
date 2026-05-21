@@ -28,6 +28,7 @@ class TestingConfig(Config):
     """
 
     TESTING = True
+    CORS_ORIGINS = ["http://testorigin.test"]
 
 
 class ProductionConfig(Config):
