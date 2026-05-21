@@ -25,7 +25,7 @@ def create_app(modules: list[Module] | None = None) -> Flask:
 
     # flask setup
     app = Flask(__name__)
-    app.config.from_mapping(cfg)
+    app.config.from_object(cfg)
 
     # register extensions
     register_error_handlers(app)
