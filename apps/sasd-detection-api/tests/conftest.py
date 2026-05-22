@@ -2,19 +2,18 @@
 tests/conftest.py
 """
 
-from os import environ
-
 import pytest
 
 from src import create_app
 
 
 @pytest.fixture
-def app():
+def app(monkeypatch):
     """
     Flask app configured for tests
     """
-    environ["FLASK_ENV"] = "testing"
+    monkeypatch.setenv("FLASK_ENV", "testing")
+    monkeypatch.setenv("GITHUB_TOKEN", "test-token")
     flask_app = create_app()
     flask_app.config["TESTING"] = True
     yield flask_app

@@ -11,6 +11,7 @@ target-version = ["py312"]
 [tool.pylint.main]
 load-plugins = ["pylint_pytest"]
 py-version = "3.12"
+init-hook = "import sys; sys.path.insert(0, '.')"
 
 [tool.pylint.format]
 max-line-length = 100

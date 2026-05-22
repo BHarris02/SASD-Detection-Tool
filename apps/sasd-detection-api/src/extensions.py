@@ -5,7 +5,7 @@ src/extensions.py
 from flask import Flask
 from flask_cors import CORS
 from flask_injector import FlaskInjector
-from injector import Module
+from injector import Injector, Module
 
 from src.container import get_modules
 
@@ -21,4 +21,6 @@ def register_flask_injector(app: Flask, modules: list[Module] | None = None) -> 
     """
     Flask Injector for DI
     """
-    FlaskInjector(app=app, modules=modules or get_modules())
+    injector = Injector(modules=modules or get_modules())
+    FlaskInjector(app=app, injector=injector)
+    app.extensions["injector"] = injector
