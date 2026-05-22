@@ -15,4 +15,5 @@ pylint==4.0.5
 pylint-pytest==1.1.8
 pytest==8.2.0
 pytokens==0.4.1
+responses==0.26.1
 tomlkit==0.15.0
