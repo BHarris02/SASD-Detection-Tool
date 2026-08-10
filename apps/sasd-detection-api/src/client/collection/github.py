@@ -44,7 +44,7 @@ class GitHubClient(ArtefactCollectionClient):
 
         return [
             Commit(
-                sha=commit["sha"],
+                a_id=commit["sha"],
                 message=commit["commit"]["message"]
             )
             for commit in commits
@@ -68,7 +68,7 @@ class GitHubClient(ArtefactCollectionClient):
 
         return [
             Issue(
-                number=issue["number"],
+                a_id=str(issue["number"]),
                 title=issue["title"],
                 body=issue["body"],
                 is_pull_request="pull_request" in issue
@@ -97,6 +97,6 @@ class GitHubClient(ArtefactCollectionClient):
             raise NoFileContentException()
 
         return File(
-            sha=content["sha"],
+            a_id=content["sha"],
             content=b64decode(content["content"]).decode("utf-8")
         )
