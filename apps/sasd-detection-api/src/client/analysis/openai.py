@@ -19,13 +19,6 @@ class OpenAiClient(AnalysisClient):
         self._model = model
 
     def analyse_commits(self, commits: list[Commit]) -> list[SasdFinding]:
-        """
-        Provide repository commits messages to model for analysis
-        
-        :param commits: A list of `Commit` artefacts for analysis
-        
-        :return list[SasdFinding]: A list of `SasdFinding` for commits positively containing SASD
-        """
         commits_by_sha = {commit.sha: commit for commit in commits}
 
         resp = self._client.beta.chat.completions.parse(
