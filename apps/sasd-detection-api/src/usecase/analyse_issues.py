@@ -8,7 +8,7 @@ from src.client.collection import ArtefactCollectionClient
 from src.model import SasdFinding
 
 
-class AnalyseIssuessUseCase(ABC):
+class AnalyseIssuesUseCase(ABC):
     """
     Orchestrates fetching and analysing issues
     """
@@ -16,7 +16,7 @@ class AnalyseIssuessUseCase(ABC):
     def __call__(self, repo_owner: str, repo_name: str) -> list[SasdFinding]: ...
 
 
-class AnalyseIssuessUseCaseImpl(AnalyseIssuessUseCase):
+class AnalyseIssuesUseCaseImpl(AnalyseIssuesUseCase):
     """
     Orchestrates fetching and analysing issues
     """
