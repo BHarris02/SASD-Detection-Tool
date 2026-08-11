@@ -7,7 +7,7 @@ from src.client.analysis.api import AnalysisClient
 from src.client.analysis.prompts import USER_PROMPT, SYSTEM_PROMPT
 from src.client.analysis.schemas import SasdFindingBatchSchema
 from src.exception import IncompleteAnalysisException
-from src.model import Artefact, Commit, Cwe, SasdFinding
+from src.model import Artefact, Commit, Cwe, File, Issue, SasdFinding
 
 
 class OpenAiClient(AnalysisClient):
@@ -24,6 +24,19 @@ class OpenAiClient(AnalysisClient):
             for commit in commits
         )
         return self._analyse_artefact(commits, USER_PROMPT.format(artefacts=formatted))
+
+    def analyse_issues(self, issues: list[Issue]) -> list[SasdFinding]:
+        formatted = "\n".join(
+            f"- id: {issue.a_id} \n title: {issue.title} \n body: {issue.body}"
+            for issue in issues
+        )
+        return self._analyse_artefact(issues, USER_PROMPT.format(artefacts=formatted))
+
+    def analyse_file_content(self, file: File) -> SasdFinding:
+        formatted = f"- id: {file.a_id} \n content: {file.content}"
+        return self._analyse_artefact([file], USER_PROMPT.format(artefacts=formatted))
+
+    # private helpers
 
     def _analyse_artefact(self, artefacts: list[Artefact], user_prompt: str) -> list[SasdFinding]:
         """
