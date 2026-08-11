@@ -6,7 +6,11 @@ from openai import OpenAI
 from src.client.analysis.api import AnalysisClient
 from src.client.analysis.prompts import USER_PROMPT, SYSTEM_PROMPT
 from src.client.analysis.schemas import SasdFindingBatchSchema
-from src.exception import IncompleteAnalysisException
+from src.exception import (
+    IncompleteAnalysisException,
+    NoArtefactsProvidedException,
+    UnknownArtefactIdException
+)
 from src.model import Artefact, Commit, Cwe, File, Issue, SasdFinding
 
 
@@ -34,14 +38,29 @@ class OpenAiClient(AnalysisClient):
 
     def analyse_file_content(self, file: File) -> SasdFinding:
         formatted = f"- id: {file.a_id} \n content: {file.content}"
-        return self._analyse_artefact([file], USER_PROMPT.format(artefacts=formatted))
+        findings = self._analyse_artefact([file], USER_PROMPT.format(artefacts=formatted))
+        return findings[0] if findings else None
 
     # private helpers
+
+    def _resolve_artefact(self, artefacts_by_id: dict[str, Artefact], artefact_id: str) -> Artefact:
+        """
+        Helper that identifies and returns an Artefact by its ID
+
+        :raises UnknownArtefactIdException: Thrown when the model hallucinates an `Artefact.a_id`
+        """
+        if artefact_id not in artefacts_by_id:
+            raise UnknownArtefactIdException()
+        return artefacts_by_id[artefact_id]
+
 
     def _analyse_artefact(self, artefacts: list[Artefact], user_prompt: str) -> list[SasdFinding]:
         """
         Generic helper that queries the model with any artefact type
         """
+        if not artefacts:
+            raise NoArtefactsProvidedException()
+
         artefacts_by_id = {artefact.a_id: artefact for artefact in artefacts}
 
         resp = self._client.beta.chat.completions.parse(
@@ -60,7 +79,7 @@ class OpenAiClient(AnalysisClient):
 
         return [
             SasdFinding(
-                artefact=artefacts_by_id[finding.artefact_id],
+                artefact=self._resolve_artefact(artefacts_by_id, finding.artefact_id),
                 explanation=finding.explanation,
                 severity=finding.severity,
                 cwe=Cwe(

@@ -1,7 +1,11 @@
 """
 src/exception/__init__.py
 """
-from .analysis import IncompleteAnalysisException
+from .analysis import (
+    IncompleteAnalysisException,
+    NoArtefactsProvidedException,
+    UnknownArtefactIdException
+)
 from .artefacts import (
     NotAFileException,
     NoCommitsFoundException,
