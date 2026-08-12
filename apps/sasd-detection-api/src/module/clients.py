@@ -5,8 +5,9 @@ from os import environ
 
 from injector import Module, provider, singleton
 
-from src.client.analysis import AnalysisClient, OpenAiClient
+from src.client.analysis import AnalysisClient, AnthropicClient, OpenAiClient
 from src.client.collection import ArtefactCollectionClient, GitHubClient
+from src.exception import MissingEnvironmentVariablesException
 
 
 class ClientsModule(Module):
@@ -20,11 +21,24 @@ class ClientsModule(Module):
         """
         Provide a concrete, configured client to analyse artefacts
         """
-        return OpenAiClient(
-            api_url=environ["GITHUB_MODELS_URL"],
-            token=environ["GITHUB_MODELS_TOKEN"],
-            model=environ["ANALYSIS_MODEL"]
-        )
+        model_provider = environ["ANALYSIS_PROVIDER"]
+        api_url = environ["ANALYSIS_MODEL_URL"]
+        token = environ["ANALYSIS_MODEL_TOKEN"]
+        model = environ["ANALYSIS_MODEL"]
+
+        if not all([model_provider, api_url, token, model]):
+            raise MissingEnvironmentVariablesException()
+
+        match model_provider.lower():
+            case "openai": return OpenAiClient(
+                api_url=api_url,
+                token=token,
+                model=model
+            )
+            case "anthropic": return AnthropicClient(
+                api_key=token,
+                model=model
+            )
 
     @provider
     @singleton

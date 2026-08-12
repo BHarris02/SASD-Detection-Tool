@@ -14,3 +14,4 @@ from .artefacts import (
     NoIssuesFoundException,
     RepositoryNotFoundException
 )
+from .config import MissingEnvironmentVariablesException

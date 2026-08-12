@@ -8,7 +8,7 @@ from src.client.analysis.prompts import SYSTEM_PROMPT
 from src.client.analysis.schemas import SasdFindingBatchSchema
 
 
-class AnthropicAnalysisClient(AnalysisClient):
+class AnthropicClient(AnalysisClient):
     """
     Outbound port that fetches analyses of artefacts via Anthropic API call
     """
