@@ -1,0 +1,27 @@
+name: sasd-detection-api CI
+
+on:
+  push:
+    paths:
+      - 'apps/sasd-detection-api/**'
+  pull_request:
+    paths:
+      - 'apps/sasd-detection-api/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/sasd-detection-api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: python -m unittest discover
