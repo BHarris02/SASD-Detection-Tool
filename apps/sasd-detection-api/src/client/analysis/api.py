@@ -9,7 +9,7 @@ from src.exception import (
     NoArtefactsProvidedException,
     UnknownArtefactIdException
 )
-from src.model import Artefact, Commit, Cwe, File, Issue, SasdFinding
+from src.model import Artefact, Commit, Cwe, File, Issue, Method, SasdFinding
 
 
 class AnalysisClient(ABC):
@@ -65,6 +65,23 @@ class AnalysisClient(ABC):
         """
         formatted = f"- id: {file.a_id} \n content: {file.content}"
         findings = self._analyse_artefact([file], USER_PROMPT.format(artefacts=formatted))
+        return findings[0] if findings else None
+
+    def analyse_method(self, method: Method) -> SasdFinding:
+        """
+        Provide a method's comments to the model for analysis
+
+        :param method: A `Method` entity
+
+        :return SasdFinding: The analysis findings for the method comments
+        """
+        formatted = f"""
+            - id: {method.a_id}
+            signature: {method.signature}
+            docstring: {method.docstring}
+            comments: {method.comments}
+        """
+        findings = self._analyse_artefact([method], USER_PROMPT.format(artefacts=formatted))
         return findings[0] if findings else None
 
     # private helpers

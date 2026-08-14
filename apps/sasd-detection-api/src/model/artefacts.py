@@ -2,7 +2,8 @@
 src/model/artefacts.py
 """
 from abc import ABC
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from enum import StrEnum
 
 
 @dataclass(frozen=True)
@@ -37,3 +38,21 @@ class File(Artefact):
     Domain model/entity for a source code file
     """
     content: str
+
+
+class MethodLanguage(StrEnum):
+    """
+    Supported source code languages for method parsing
+    """
+    PYTHON = "python"
+    JAVA = "java"
+
+
+@dataclass(frozen=True)
+class Method(Artefact):
+    """
+    Domain model/entity for a single method
+    """
+    signature: str
+    docstring: str
+    comments: str

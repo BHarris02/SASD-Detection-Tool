@@ -5,13 +5,16 @@ from injector import Module, provider, singleton
 
 from src.client.analysis import AnalysisClient
 from src.client.collection import ArtefactCollectionClient
+from src.strategy import MethodProcessorRegistry
 from src.usecase import (
     AnalyseCommitsUseCase,
     AnalyseCommitsUseCaseImpl,
     AnalyseFileUseCase,
     AnalyseFileUseCaseImpl,
     AnalyseIssuesUseCase,
-    AnalyseIssuesUseCaseImpl
+    AnalyseIssuesUseCaseImpl,
+    AnalyseMethodUseCase,
+    AnalyseMethodUseCaseImpl
 )
 
 
@@ -55,3 +58,15 @@ class UsecaseModule(Module):
         Provide a wired-up usecase to analyse file content
         """
         return AnalyseFileUseCaseImpl(artefacts, analysis)
+
+    @provider
+    @singleton
+    def provide_analyse_method(
+        self,
+        analysis: AnalysisClient,
+        processor_registry: MethodProcessorRegistry
+    ) -> AnalyseMethodUseCase:
+        """
+        Provide a wired-up usecase to analyse a method's comments
+        """
+        return AnalyseMethodUseCaseImpl(analysis, processor_registry)

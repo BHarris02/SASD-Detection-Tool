@@ -8,10 +8,14 @@ from .analysis import (
 )
 from .artefacts import (
     NotAFileException,
+    NoCommentsFoundException,
     NoCommitsFoundException,
     NoFileContentException,
     NoFileFoundException,
     NoIssuesFoundException,
-    RepositoryNotFoundException
+    RepositoryNotFoundException,
+    UnsupportedLanguageException,
+    UnparsableMethodException,
+    NoMethodFoundException
 )
 from .config import MissingEnvironmentVariablesException

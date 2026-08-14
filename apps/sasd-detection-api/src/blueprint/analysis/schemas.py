@@ -8,6 +8,8 @@ from pydantic import BaseModel
 from src.model import SasdFinding, SasdFindingSeverity
 
 
+# --- requests ---
+
 class AnalysisRequest(BaseModel):
     """
     Validate an incoming analysis request
@@ -16,6 +18,16 @@ class AnalysisRequest(BaseModel):
     repository_name: str
     file_path: Optional[str] = None
 
+
+class AnalyseMethodRequest(BaseModel):
+    """
+    Validate an incoming request to validate a method
+    """
+    method: str
+    language: str
+
+
+# --- responses ---
 
 class CweResponse(BaseModel):
     """
