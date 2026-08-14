@@ -2,7 +2,7 @@
 src/model/artefacts.py
 """
 from abc import ABC
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import StrEnum
 
 
