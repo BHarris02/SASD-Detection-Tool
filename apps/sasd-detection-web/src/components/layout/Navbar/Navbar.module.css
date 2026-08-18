@@ -1,0 +1,50 @@
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.navLogo {
+    float: left;
+    font-size: 1.5rem;
+}
+
+nav {
+    float: right;
+}
+
+.navLinks {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.navLinks li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.navLinks li a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 15px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.navLinks li a:hover::after {
+    width: calc(70% - 15px);
+}
