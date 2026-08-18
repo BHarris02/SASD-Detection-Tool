@@ -1,0 +1,15 @@
+.fileTree {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 16px 8px;
+}
+
+.fileTree > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fileTree p {
+    text-align: center;
+}
