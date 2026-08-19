@@ -3,38 +3,36 @@ import RepoEntry from './RepoEntry/RepoEntry';
 import styles from './RepoTree.module.css';
 import type { RepoNode } from '@/types/repo';
 
-const mockNodes: RepoNode[] = [
-    { type: 'file', name: 'README.md', path: 'README.md' },
-    { type: 'file', name: 'package.json', path: 'package.json' },
-    {
-        type: 'folder',
-        name: 'src',
-        children: [
-            { type: 'file', name: 'index.ts', path: 'src/index.ts' },
-            { type: 'file', name: 'App.tsx', path: 'src/App.tsx' },
-            {
-                type: 'folder',
-                name: 'components',
-                children: [
-                    { type: 'file', name: 'Button.tsx', path: 'src/components/Button.tsx' },
-                ],
-            },
-        ],
-    },
-    {
-        type: 'folder',
-        name: 'public',
-        children: [
-            { type: 'file', name: 'favicon.ico', path: 'public/favicon.ico' },
-        ],
-    },
-];
+interface RepoTreeProps {
+    repoInput: string;
+    onRepoInputChange: (value: string) => void;
+    fileTree: RepoNode[] | null;
+    isLoading: boolean;
+    onLoadRepo: () => void;
+    onFileSelect: (path: string) => void;
+}
 
-export default function RepoTree() {
+export default function RepoTree({
+    repoInput,
+    onRepoInputChange,
+    fileTree,
+    isLoading,
+    onLoadRepo,
+    onFileSelect
+}: RepoTreeProps) {
     return (
     <div className={styles.repoTree}>
-        <RepoEntry />
-        <FileTree nodes={mockNodes} />
+        <RepoEntry
+            value={repoInput}
+            onValueChange={onRepoInputChange}
+            onSubmit={onLoadRepo}
+            isLoading={isLoading}
+        />
+        <FileTree
+            nodes={fileTree}
+            isLoading={isLoading}
+            onFileSelect={onFileSelect}
+        />
     </div>
     );
 }

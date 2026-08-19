@@ -4,9 +4,10 @@ import styles from './TreeNode.module.css';
 
 interface TreeNodeProps {
     node: RepoNode;
+    onFileSelect: (path: string) => void;
 }
 
-export default function TreeNode({ node }: TreeNodeProps) {
+export default function TreeNode({ node, onFileSelect }: TreeNodeProps) {
     if (node.type === "folder") {
         return (
             <li>
@@ -16,7 +17,7 @@ export default function TreeNode({ node }: TreeNodeProps) {
                 </div>
                 <ul className={styles.childList}>
                     {node.children.map((child) => 
-                        <TreeNode key={child.name} node={child} />
+                        <TreeNode key={child.name} node={child} onFileSelect={onFileSelect}/>
                     )}
                 </ul>
             </li>
@@ -24,7 +25,7 @@ export default function TreeNode({ node }: TreeNodeProps) {
     }
 
     return (
-        <li className={styles.treeNode}>
+        <li className={styles.treeNode} onClick={() => onFileSelect(node.path)}>
             <FaFileAlt />
             { node.name }
         </li>
