@@ -4,9 +4,17 @@ header {
     padding: 10px 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 main {
+    flex: 1;
+    min-height: 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
     width: 100%;
     padding: 16px 16px;
+    gap: 16px;
 }
