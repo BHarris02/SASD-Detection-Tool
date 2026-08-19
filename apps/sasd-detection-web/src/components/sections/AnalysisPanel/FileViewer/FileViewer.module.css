@@ -1,0 +1,19 @@
+.fileViewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 16px;
+    flex: 1;
+    min-height: 0;
+}
+
+.fileViewer textarea {
+    width: 95%;
+    height: 100%;
+    resize: none;
+    font-family: system-ui, sans-serif;
+}
+
+.fileViewer textarea:focus {
+    outline: 2px solid var(--color-focus);
+}

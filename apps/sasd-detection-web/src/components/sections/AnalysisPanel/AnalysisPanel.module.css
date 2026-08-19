@@ -1,0 +1,7 @@
+.analysisPanel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--color-fg);
+}
