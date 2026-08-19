@@ -1,0 +1,5 @@
+.buttonGroup {
+    display: inline-flex;
+    gap: 8px;
+    padding: 12px;
+}
